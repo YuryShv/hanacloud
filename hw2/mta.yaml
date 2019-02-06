@@ -1,0 +1,16 @@
+ID: homework_2
+_schema-version: '2.1'
+version: 0.0.1
+
+resources:
+  - name: destination
+    type: destination
+    parameters:
+      service-plan: lite
+      shared: true
+
+  - name: connectivity
+    type: connectivity
+    parameters:
+      service-plan: lite
+      shared: true

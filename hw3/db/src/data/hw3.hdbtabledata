@@ -1,0 +1,50 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "hw3::User",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "hw3::Users.csv",
+        "has_header": true
+      },
+      "import_settings": {
+        "import_columns": [
+          "usid",
+          "name"
+        ]
+      }
+    },
+    {
+      "target_table": "hw3::ExtraInfo.Address",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "hw3::Address.csv",
+        "has_header": true
+      },
+      "import_settings": {
+        "import_columns": [
+					"usid",
+					"city",
+					"strt",
+					"hnum"
+        ]
+      }
+    },
+    {
+      "target_table": "hw3::ExtraInfo.Cars",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "hw3::Cars.csv",
+        "has_header": true
+      },
+      "import_settings": {
+        "import_columns": [
+					"crid",
+          "usid",
+          "name"
+        ]
+      }
+    }
+  ]
+}
