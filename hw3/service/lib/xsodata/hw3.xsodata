@@ -2,9 +2,9 @@ service namespace "hw3"{
 
     "hw3::User" as "Users"
                 navigates("Users_2_Address" as "toAddress", "Users_2_Cars" as "toCars")
-            create forbidden
-            update forbidden
-            delete forbidden;
+            create using "xsjs.user:usersCreate.xsjslib::usersCreate"
+            update  using "xsjs.user:usersCreate.xsjslib::usersUpdate"
+            delete using "xsjs.user:usersCreate.xsjslib::usersDelete";
 
     "hw3::ExtraInfo.Address" as "Address"
             create forbidden
