@@ -1,0 +1,5 @@
+{
+  "xsappname": "hw3",
+  "tenant-mode": "dedicated",
+  "description": "Security profile of called application"
+}

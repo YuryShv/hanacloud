@@ -1,0 +1,49 @@
+{
+    "resources": [
+        {
+            "name": "Component-dbg.js",
+            "isDebug": true
+        },
+        {
+            "name": "Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "Component.js"
+        },
+        {
+            "name": "di.code-validation.core_issues.json"
+        },
+        {
+            "name": "fragment\\ConfirmDeleteDialog.fragment.xml"
+        },
+        {
+            "name": "index.html"
+        },
+        {
+            "name": "manifest.json"
+        },
+        {
+            "name": "tmp\\Component-preload.js",
+            "merged": true
+        },
+        {
+            "name": "tmp\\Component.js"
+        },
+        {
+            "name": "tmp\\fragment\\ConfirmDeleteDialog.fragment.xml"
+        },
+        {
+            "name": "tmp\\index.html"
+        },
+        {
+            "name": "tmp\\manifest.json"
+        },
+        {
+            "name": "tmp-dbg\\Component.js"
+        },
+        {
+            "name": "xs-app.json"
+        }
+    ]
+}
