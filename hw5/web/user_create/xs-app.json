@@ -1,0 +1,28 @@
+{  
+   "welcomeFile":"/index.html",
+   "authenticationMethod":"route",
+   "routes":[  
+      {  
+         "source":"^(.*)$",
+         "target":"$1",
+         "service":"html5-apps-repo-rt",
+         "csrfProtection":true,
+         "authenticationType":"xsuaa",
+         "scope":{  
+            "GET":[  
+               "$XSAPPNAME.hw3.view"
+            ],
+            "POST":[  
+               "$XSAPPNAME.hw3.edit"
+            ],
+            "PUT":[  
+               "$XSAPPNAME.hw3.edit"
+            ],
+            "DELETE":[  
+               "$XSAPPNAME.hw3.edit"
+            ],
+            "default":"$XSAPPNAME.hw3.view"
+         }
+      }
+   ]
+}
