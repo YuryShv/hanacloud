@@ -13,6 +13,11 @@
       "destination": "S4C"
     },
     {
+      "source": "^/odata_resources/(.*)$",
+      "target": "$1",
+      "destination": "odata_resources"
+    },    
+    {
       "source": "/api/(.*)",
       "target": "$1",
       "destination": "pt_service",

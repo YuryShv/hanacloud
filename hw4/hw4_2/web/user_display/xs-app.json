@@ -3,6 +3,11 @@
   "authenticationMethod": "none",
   "routes": [
     {
+      "source": "^/odata_resources/(.*)$",
+      "target": "$1",
+      "destination": "odata_resources"
+    },
+    {
       "source": "^(.*)$",
       "target": "$1",
       "service": "html5-apps-repo-rt",
