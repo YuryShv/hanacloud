@@ -3,9 +3,9 @@
   "authenticationMethod": "none",
   "routes": [
     {
-      "source": "^/odata_resources/(.*)$",
+      "source": "^/api/(.*)$",
       "target": "$1",
-      "destination": "odata_resources"
+      "destination": "pt_service"
     },
     {
       "source": "^(.*)$",
