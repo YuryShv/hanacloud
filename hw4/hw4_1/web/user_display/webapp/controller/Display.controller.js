@@ -6,8 +6,6 @@ sap.ui.define([
 		onInit: function(){
 			/*var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);*/
-			console.log("hehe");
-			console.log(this.byId("details"));
 		}
 		/*_onObjectMatched: function (oEvent) {
 			this.byId("PeopleDetailPanel").

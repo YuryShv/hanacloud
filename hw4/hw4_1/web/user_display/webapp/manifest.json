@@ -12,6 +12,15 @@
 		"sourceTemplate": {
 			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
 			"version": "1.40.12"
+		},
+		"dataSources": {
+			"mainService": {
+				"uri": "/odata_resources/xsodata/hw3.xsodata",
+				"type": "OData",
+				"settings": {
+					"odataVersion": "2.0"
+				}
+			}
 		}
 	},
 
@@ -64,10 +73,15 @@
 				}
 			},
 			"users": {
-					"type": "sap.ui.model.json.JSONModel",
-					"uri": "https://p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com/xsodata/hw3.xsodata/Users"
+				"dataSource": "mainService",
+				"settings": {
+					"defaultBindingMode": "TwoWay",
+					"defaultCountMode": "Inline",
+					"useBatch": false,
+					"disableHeadRequestForToken": true
 				}
-			}
+			}	
+		}
 		},
 		"resources": {		}
 	}

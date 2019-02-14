@@ -1,0 +1,3733 @@
+#2.0#2019 02 13 18:18:51.705#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startEvent#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-4###
+[StartProcessListener] Authenticated user ID: yury.sheverdak@leverx.com#
+
+#2.0#2019 02 13 18:18:51.706#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startEvent#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-4###
+[StartProcessListener] Previous user: null#
+
+#2.0#2019 02 13 18:18:51.709#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startEvent#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-4###
+[StartProcessListener] Process environment: {
+  "SKIP_SSL_VALIDATION": "false",
+  "DB_TYPE": "POSTGRESQL",
+  "XS_TYPE": "CF",
+  "VERSION": "1.72.4",
+  "MAIL_API_URL": "https://slanamailproxyab00ec583.hana.ondemand.com/SendFeedbackMail/",
+  "BASIC_AUTH_ENABLED": "true",
+  "PLATFORM_V3": "{\n  \"name\": \"CLOUD-FOUNDRY\",\n  \"module-types\": [\n    { \"name\": \"custom\" },\n    { \"name\": \"javascript.nodejs\" },\n    { \"name\": \"java\", \"parameters\": { \"buildpack\": \"sap_java_buildpack\" }},\n    { \"name\": \"java.tomcat\", \"parameters\": { \"buildpack\": \"sap_java_buildpack\" }, \"properties\": { \"TARGET_RUNTIME\": \"tomcat\" }},\n    { \"name\": \"java.tomee\",  \"parameters\": { \"buildpack\": \"sap_java_buildpack\" }, \"properties\": { \"TARGET_RUNTIME\": \"tomee\" }},\n    { \"name\": \"com.sap.xs.hdi-dynamic\", \"parameters\": { \"buildpack\": \"nodejs_buildpack\" }},\n    { \"name\": \"com.sap.xs.hdi\", \"parameters\": { \"no-route\": true, \"no-start\": true, \"memory\": \"256M\", \"tasks\": [{ \"name\": \"deploy\", \"memory\": \"256M\", \"command\": \"npm start\" }], \"dependency-type\": \"hard\" }, \"properties\" : { \"EXIT\": 1 }},\n    { \"name\": \"com.sap.xs.hdi-zdm\", \"parameters\": { \"zdm-mode\": true, \"no-route\": true, \"no-start\": true, \"memory\": \"256M\", \"tasks\": [{ \"name\": \"deploy\", \"memory\": \"256M\", \"command\": \"npm start\" }], \"dependency-type\": \"hard\" }, \"properties\" : { \"EXIT\": 1, \"HDI_DEPLOY_MODE\": \"ZDM\" }},\n    { \"name\": \"com.sap.portal.site-content\", \"parameters\": { \"no-route\": true, \"memory\": \"256M\", \"execute-app\": true, \"success-marker\": \"STDOUT:Deployment of site content to .* done.*\", \"failure-marker\": \"STDERR:Deployment of site content to .* failed.*\", \"stop-app\": true, \"check-deploy-id\": true, \"dependency-type\": \"hard\", \"health-check-type\": \"none\" }},\n    { \"name\": \"com.sap.xs.dwf\", \"parameters\": { \"no-route\": true, \"memory\": \"256M\", \"execute-app\": true, \"success-marker\": \"STDOUT:The deployment of DWF content to .* container finished successfully .*\", \"failure-marker\": \"STDERR:The deployment of DWF content to .* container failed .*\", \"stop-app\": true, \"check-deploy-id\": true, \"dependency-type\": \"hard\", \"health-check-type\": \"none\" }},\n    { \"name\": \"business-logging\", \"parameters\": { \"no-route\": true, \"memory\": \"256M\", \"execute-app\": true, \"success-marker\": \"STDOUT:Deployment of content deployer done.\", \"failure-marker\": \"STDERR:Deployment of content deployer failed.\", \"stop-app\": true, \"health-check-type\": \"none\" }},\n    { \"name\": \"com.sap.html5.application-content\", \"parameters\": { \"no-route\": true, \"memory\": \"256M\", \"execute-app\": true, \"success-marker\": \"STDOUT:Deployment of html5 application content done.*\", \"failure-marker\": \"STDERR:Deployment of html5 application content failed.*\", \"stop-app\": true, \"check-deploy-id\": true, \"dependency-type\": \"hard\", \"health-check-type\": \"none\" }}, \n    { \"name\": \"staticfile\", \"parameters\": { \"buildpack\": \"staticfile_buildpack\" }},\n    { \"name\": \"ruby\", \"parameters\": { \"buildpack\": \"ruby_buildpack\" }},\n    { \"name\": \"nodejs\", \"parameters\": { \"buildpack\": \"nodejs_buildpack\" }},\n    { \"name\": \"go\", \"parameters\": { \"buildpack\": \"go_buildpack\" }},\n    { \"name\": \"python\", \"parameters\": { \"buildpack\": \"python_buildpack\" }},\n    { \"name\": \"php\", \"parameters\": { \"buildpack\": \"php_buildpack\" }},\n    { \"name\": \"binary\", \"parameters\": { \"buildpack\": \"binary_buildpack\" }},\n    { \"name\": \"dotnet_core\", \"parameters\": { \"buildpack\": \"dotnet_core_buildpack\" }},\n    { \"name\": \"application\" },\n    { \"name\": \"com.sap.application.content\" }\n  ],\n  \"resource-types\": [\n    { \"name\": \"com.sap.xs.hdi-container\", \"parameters\": { \"service\": \"hana\", \"service-plan\": \"hdi-shared\", \"service-alternatives\": [\"hanatrial\"], \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.hana-sbss\", \"parameters\": { \"service\": \"hana\", \"service-plan\": \"sbss\", \"service-alternatives\": [\"hanatrial\"], \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.hana-schema\", \"parameters\": { \"service\": \"hana\", \"service-plan\": \"schema\", \"service-alternatives\": [\"hanatrial\"], \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.hana-securestore\", \"parameters\": { \"service\": \"hana\", \"service-plan\": \"securestore\", \"service-alternatives\": [\"hanatrial\"], \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.managed-hdi-container\", \"parameters\": { \"service\": \"managed-hana\", \"service-plan\": \"hdi-shared\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.managed-hana-schema\", \"parameters\": { \"service\": \"managed-hana\", \"service-plan\": \"schema\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.managed-hana-securestore\", \"parameters\": { \"service\": \"managed-hana\", \"service-plan\": \"securestore\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.job-scheduler\", \"parameters\": { \"service\": \"jobscheduler\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.fs\", \"parameters\": { \"service\": \"fs-storage\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.uaa\", \"parameters\": { \"service\": \"xsuaa\", \"service-plan\": \"application\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.uaa-space\", \"parameters\": { \"service\": \"xsuaa\", \"service-plan\": \"application\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.uaa-devuser\", \"parameters\": { \"service\": \"xsuaa\", \"service-plan\": \"application\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.uaa-application\", \"parameters\": { \"service\": \"xsuaa\", \"service-plan\": \"application\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.uaa-broker\", \"parameters\": { \"service\": \"xsuaa\", \"service-plan\": \"broker\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.application-logs\", \"parameters\": { \"service\": \"application-logs\", \"service-plan\": \"lite\", \"ignore-update-errors\": true , \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.portal.site-host\", \"parameters\": { \"service\": \"portal-services\", \"service-plan\": \"site-host\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.portal.site-content\", \"parameters\": { \"service\": \"portal-services\", \"service-plan\": \"site-content\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.dwf-edw-client\", \"parameters\": { \"service\": \"dwf\", \"service-plan\": \"edw-client\", \"type\": \"managed-service\"}},\n    { \"name\": \"com.sap.xs.auditlog\", \"parameters\": { \"service\": \"auditlog\", \"service-plan\": \"standard\", \"ignore-update-errors\": true , \"type\": \"managed-service\" }},\n    { \"name\": \"auditlog\", \"parameters\": { \"service\": \"auditlog\", \"service-plan\": \"standard\", \"ignore-update-errors\": true , \"type\": \"managed-service\" }},\n    { \"name\": \"org.mongodb\", \"parameters\": { \"service\": \"mongodb\", \"service-plan\": \"v3.0-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"mongodb\", \"parameters\": { \"service\": \"mongodb\", \"service-plan\": \"v3.0-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"org.postgresql\", \"parameters\": { \"service\": \"postgresql\", \"service-plan\": \"v9.4-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"postgresql\", \"parameters\": { \"service\": \"postgresql\", \"service-plan\": \"v9.4-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.rabbitmq\", \"parameters\": { \"service\": \"rabbitmq\", \"service-plan\": \"v3.6-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"rabbitmq\", \"parameters\": { \"service\": \"rabbitmq\", \"service-plan\": \"v3.6-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"io.redis\", \"parameters\": { \"service\": \"redis\", \"service-plan\": \"v3.0-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"redis\", \"parameters\": { \"service\": \"redis\", \"service-plan\": \"v3.0-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.influxdb\", \"parameters\": { \"service\": \"influxdb\", \"service-plan\": \"v0.13-container\", \"type\": \"managed-service\" }},\n    { \"name\": \"influxdb\", \"parameters\": { \"service\": \"influxdb\", \"service-plan\": \"v0.13-container\", \"type\": \"managed-service\" }},\n    { \"name\": \"org.cloudfoundry.user-provided-service\", \"parameters\": { \"type\": \"user-provided-service\" }},\n    { \"name\": \"org.cloudfoundry.managed-service\", \"parameters\": { \"type\": \"managed-service\" }},\n    { \"name\": \"org.cloudfoundry.existing-service\", \"parameters\": { \"type\": \"existing-service\" }},\n    { \"name\": \"org.cloudfoundry.existing-service-key\", \"parameters\": { \"type\": \"existing-service-key\" }},\n    { \"name\": \"mta-provided\", \"parameters\": { \"type\": \"mta-provides-dependency\" }},\n    { \"name\": \"configuration\", \"parameters\": { \"type\": \"configuration\" }},\n    { \"name\": \"autoscaler\", \"parameters\": { \"service\": \"autoscaler\", \"service-plan\": \"lite\", \"ignore-update-errors\": true , \"type\": \"managed-service\" }},\n    { \"name\": \"application-logs\", \"parameters\": { \"service\": \"application-logs\", \"service-plan\": \"lite\", \"ignore-update-errors\": true , \"type\": \"managed-service\" }},\n    { \"name\": \"connectivity\", \"parameters\": { \"service\": \"connectivity\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }},\n    { \"name\": \"feature-flags\", \"parameters\": { \"service\": \"feature-flags\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }},\n    { \"name\": \"metering\", \"parameters\": { \"service\": \"metering\", \"service-plan\": \"standard\", \"type\": \"managed-service\" }},\n    { \"name\": \"ml-foundation-services\", \"parameters\": { \"service\": \"ml-foundation-services\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }},\n    { \"name\": \"objectstore\", \"parameters\": { \"service\": \"objectstore\", \"service-plan\": \"s3-standard\", \"type\": \"managed-service\" }},\n    { \"name\": \"destination\", \"parameters\": { \"service\": \"destination\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }}\n  ]\n}\n",
+  "GLOBAL_AUDITOR_USER": "DSglobalAuditorUser",
+  "PLATFORM_V2": "{\n  \"name\": \"CLOUD-FOUNDRY\",\n  \"module-types\": [\n    { \"name\": \"custom\" },\n    { \"name\": \"javascript.nodejs\" },\n    { \"name\": \"java\", \"parameters\": { \"buildpack\": \"sap_java_buildpack\" }},\n    { \"name\": \"java.tomcat\", \"parameters\": { \"buildpack\": \"sap_java_buildpack\" }, \"properties\": { \"TARGET_RUNTIME\": \"tomcat\" }},\n    { \"name\": \"java.tomee\",  \"parameters\": { \"buildpack\": \"sap_java_buildpack\" }, \"properties\": { \"TARGET_RUNTIME\": \"tomee\" }},\n    { \"name\": \"com.sap.xs.hdi-dynamic\", \"parameters\": { \"buildpack\": \"nodejs_buildpack\" }},\n    { \"name\": \"com.sap.xs.hdi\", \"parameters\": { \"no-route\": true, \"no-start\": true, \"memory\": \"256M\", \"tasks\": [{ \"name\": \"deploy\", \"memory\": \"256M\", \"command\": \"npm start\" }], \"dependency-type\": \"hard\" }, \"properties\" : { \"EXIT\": 1 }},\n    { \"name\": \"com.sap.xs.hdi-zdm\", \"parameters\": { \"zdm-mode\": true, \"no-route\": true, \"no-start\": true, \"memory\": \"256M\", \"tasks\": [{ \"name\": \"deploy\", \"memory\": \"256M\", \"command\": \"npm start\" }], \"dependency-type\": \"hard\" }, \"properties\" : { \"EXIT\": 1, \"HDI_DEPLOY_MODE\": \"ZDM\" }},\n    { \"name\": \"com.sap.portal.site-content\", \"parameters\": { \"no-route\": true, \"memory\": \"256M\", \"execute-app\": true, \"success-marker\": \"STDOUT:Deployment of site content to .* done.*\", \"failure-marker\": \"STDERR:Deployment of site content to .* failed.*\", \"stop-app\": true, \"check-deploy-id\": true, \"dependency-type\": \"hard\", \"health-check-type\": \"none\" }},\n    { \"name\": \"com.sap.xs.dwf\", \"parameters\": { \"no-route\": true, \"memory\": \"256M\", \"execute-app\": true, \"success-marker\": \"STDOUT:The deployment of DWF content to .* container finished successfully .*\", \"failure-marker\": \"STDERR:The deployment of DWF content to .* container failed .*\", \"stop-app\": true, \"check-deploy-id\": true, \"dependency-type\": \"hard\", \"health-check-type\": \"none\" }},\n    { \"name\": \"business-logging\", \"parameters\": { \"no-route\": true, \"memory\": \"256M\", \"execute-app\": true, \"success-marker\": \"STDOUT:Deployment of content deployer done.\", \"failure-marker\": \"STDERR:Deployment of content deployer failed.\", \"stop-app\": true, \"health-check-type\": \"none\" }},\n    { \"name\": \"com.sap.html5.application-content\", \"parameters\": { \"no-route\": true, \"memory\": \"256M\", \"execute-app\": true, \"success-marker\": \"STDOUT:Deployment of html5 application content done.*\", \"failure-marker\": \"STDERR:Deployment of html5 application content failed.*\", \"stop-app\": true, \"check-deploy-id\": true, \"dependency-type\": \"hard\", \"health-check-type\": \"none\" }}, \n    { \"name\": \"staticfile\", \"parameters\": { \"buildpack\": \"staticfile_buildpack\" }},\n    { \"name\": \"ruby\", \"parameters\": { \"buildpack\": \"ruby_buildpack\" }},\n    { \"name\": \"nodejs\", \"parameters\": { \"buildpack\": \"nodejs_buildpack\" }},\n    { \"name\": \"go\", \"parameters\": { \"buildpack\": \"go_buildpack\" }},\n    { \"name\": \"python\", \"parameters\": { \"buildpack\": \"python_buildpack\" }},\n    { \"name\": \"php\", \"parameters\": { \"buildpack\": \"php_buildpack\" }},\n    { \"name\": \"binary\", \"parameters\": { \"buildpack\": \"binary_buildpack\" }},\n    { \"name\": \"dotnet_core\", \"parameters\": { \"buildpack\": \"dotnet_core_buildpack\" }},\n    { \"name\": \"application\" },\n    { \"name\": \"com.sap.application.content\" }\n  ],\n  \"resource-types\": [\n    { \"name\": \"com.sap.xs.hdi-container\", \"parameters\": { \"service\": \"hana\", \"service-plan\": \"hdi-shared\", \"service-alternatives\": [\"hanatrial\"], \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.hana-sbss\", \"parameters\": { \"service\": \"hana\", \"service-plan\": \"sbss\", \"service-alternatives\": [\"hanatrial\"], \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.hana-schema\", \"parameters\": { \"service\": \"hana\", \"service-plan\": \"schema\", \"service-alternatives\": [\"hanatrial\"], \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.hana-securestore\", \"parameters\": { \"service\": \"hana\", \"service-plan\": \"securestore\", \"service-alternatives\": [\"hanatrial\"], \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.managed-hdi-container\", \"parameters\": { \"service\": \"managed-hana\", \"service-plan\": \"hdi-shared\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.managed-hana-schema\", \"parameters\": { \"service\": \"managed-hana\", \"service-plan\": \"schema\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.managed-hana-securestore\", \"parameters\": { \"service\": \"managed-hana\", \"service-plan\": \"securestore\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.job-scheduler\", \"parameters\": { \"service\": \"jobscheduler\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.fs\", \"parameters\": { \"service\": \"fs-storage\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.uaa\", \"parameters\": { \"service\": \"xsuaa\", \"service-plan\": \"application\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.uaa-space\", \"parameters\": { \"service\": \"xsuaa\", \"service-plan\": \"application\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.uaa-devuser\", \"parameters\": { \"service\": \"xsuaa\", \"service-plan\": \"application\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.uaa-application\", \"parameters\": { \"service\": \"xsuaa\", \"service-plan\": \"application\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.uaa-broker\", \"parameters\": { \"service\": \"xsuaa\", \"service-plan\": \"broker\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.application-logs\", \"parameters\": { \"service\": \"application-logs\", \"service-plan\": \"lite\", \"ignore-update-errors\": true , \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.portal.site-host\", \"parameters\": { \"service\": \"portal-services\", \"service-plan\": \"site-host\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.portal.site-content\", \"parameters\": { \"service\": \"portal-services\", \"service-plan\": \"site-content\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.sap.xs.dwf-edw-client\", \"parameters\": { \"service\": \"dwf\", \"service-plan\": \"edw-client\", \"type\": \"managed-service\"}},\n    { \"name\": \"com.sap.xs.auditlog\", \"parameters\": { \"service\": \"auditlog\", \"service-plan\": \"standard\", \"ignore-update-errors\": true , \"type\": \"managed-service\" }},\n    { \"name\": \"auditlog\", \"parameters\": { \"service\": \"auditlog\", \"service-plan\": \"standard\", \"ignore-update-errors\": true , \"type\": \"managed-service\" }},\n    { \"name\": \"org.mongodb\", \"parameters\": { \"service\": \"mongodb\", \"service-plan\": \"v3.0-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"mongodb\", \"parameters\": { \"service\": \"mongodb\", \"service-plan\": \"v3.0-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"org.postgresql\", \"parameters\": { \"service\": \"postgresql\", \"service-plan\": \"v9.4-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"postgresql\", \"parameters\": { \"service\": \"postgresql\", \"service-plan\": \"v9.4-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.rabbitmq\", \"parameters\": { \"service\": \"rabbitmq\", \"service-plan\": \"v3.6-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"rabbitmq\", \"parameters\": { \"service\": \"rabbitmq\", \"service-plan\": \"v3.6-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"io.redis\", \"parameters\": { \"service\": \"redis\", \"service-plan\": \"v3.0-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"redis\", \"parameters\": { \"service\": \"redis\", \"service-plan\": \"v3.0-dev\", \"type\": \"managed-service\" }},\n    { \"name\": \"com.influxdb\", \"parameters\": { \"service\": \"influxdb\", \"service-plan\": \"v0.13-container\", \"type\": \"managed-service\" }},\n    { \"name\": \"influxdb\", \"parameters\": { \"service\": \"influxdb\", \"service-plan\": \"v0.13-container\", \"type\": \"managed-service\" }},\n    { \"name\": \"org.cloudfoundry.user-provided-service\", \"parameters\": { \"type\": \"user-provided-service\" }},\n    { \"name\": \"org.cloudfoundry.managed-service\", \"parameters\": { \"type\": \"managed-service\" }},\n    { \"name\": \"org.cloudfoundry.existing-service\", \"parameters\": { \"type\": \"existing-service\" }},\n    { \"name\": \"org.cloudfoundry.existing-service-key\", \"parameters\": { \"type\": \"existing-service-key\" }},\n    { \"name\": \"mta-provided\", \"parameters\": { \"type\": \"mta-provides-dependency\" }},\n    { \"name\": \"configuration\", \"parameters\": { \"type\": \"configuration\" }},\n    { \"name\": \"autoscaler\", \"parameters\": { \"service\": \"autoscaler\", \"service-plan\": \"lite\", \"ignore-update-errors\": true , \"type\": \"managed-service\" }},\n    { \"name\": \"application-logs\", \"parameters\": { \"service\": \"application-logs\", \"service-plan\": \"lite\", \"ignore-update-errors\": true , \"type\": \"managed-service\" }},\n    { \"name\": \"connectivity\", \"parameters\": { \"service\": \"connectivity\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }},\n    { \"name\": \"feature-flags\", \"parameters\": { \"service\": \"feature-flags\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }},\n    { \"name\": \"metering\", \"parameters\": { \"service\": \"metering\", \"service-plan\": \"standard\", \"type\": \"managed-service\" }},\n    { \"name\": \"ml-foundation-services\", \"parameters\": { \"service\": \"ml-foundation-services\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }},\n    { \"name\": \"objectstore\", \"parameters\": { \"service\": \"objectstore\", \"service-plan\": \"s3-standard\", \"type\": \"managed-service\" }},\n    { \"name\": \"destination\", \"parameters\": { \"service\": \"destination\", \"service-plan\": \"lite\", \"type\": \"managed-service\" }}\n  ]\n}\n",
+  "GATHER_USAGE_STATISTICS": "false"
+}#
+
+#2.0#2019 02 13 18:18:51.709#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startEvent#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-4###
+[StartProcessListener] Current user: yury.sheverdak@leverx.com#
+
+#2.0#2019 02 13 18:18:51.709#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startEvent#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-4###
+[StartProcessListener] Client space: dev#
+
+#2.0#2019 02 13 18:18:51.710#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startEvent#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-4###
+[StartProcessListener] Client org: P2001081098trial_p2001081098trial#
+
+#2.0#2019 02 13 18:18:51.710#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startEvent#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########http-nio-0.0.0.0-8080-exec-4###
+[StartProcessListener] Process variables: {
+  "abortOnError": false,
+  "keepFiles": false,
+  "versionRule": "SAME_HIGHER",
+  "gitSkipSsl": false,
+  "failOnCrashed": true,
+  "noFailOnMissingPermissions": false,
+  "useNamespacesForServices": true,
+  "skipOwnershipValidation": false,
+  "startTimeout": 3600,
+  "deleteServiceBrokers": false,
+  "appArchiveId": "9057ea72-9fd5-4fd1-b986-43d1ca01802e,c959ab6f-b28a-4f99-8a8f-fcaf61c24e46",
+  "gitUri": "",
+  "deleteServiceKeys": false,
+  "noRestartSubscribedApps": false,
+  "useNamespaces": false,
+  "noStart": false,
+  "deleteServices": false
+}#
+
+#2.0#2019 02 13 18:18:51.735#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.validateParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[ValidateDeployParametersStep] Executing task "validateParametersTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:51.736#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.validateParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[ValidateDeployParametersStep] Validating parameters...#
+
+#2.0#2019 02 13 18:18:51.738#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.validateParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[ValidateDeployParametersStep] Building archive from parts...#
+
+#2.0#2019 02 13 18:18:51.738#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.validateParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[ValidateDeployParametersStep] Merging archive part with ID "c959ab6f-b28a-4f99-8a8f-fcaf61c24e46", name "hw3.mtar.part.0"#
+
+#2.0#2019 02 13 18:18:53.030#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.validateParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[ValidateDeployParametersStep] Merging archive part with ID "9057ea72-9fd5-4fd1-b986-43d1ca01802e", name "hw3.mtar.part.1"#
+
+#2.0#2019 02 13 18:18:55.492#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.validateParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[ValidateDeployParametersStep] Parameters validated#
+
+#2.0#2019 02 13 18:18:55.493#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.validateParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Validate Parameters" finished#
+
+#2.0#2019 02 13 18:18:55.513#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processArchiveTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaArchiveStep] Executing task "processArchiveTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:55.515#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processArchiveTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaArchiveStep] Processing MTA archive...#
+
+#2.0#2019 02 13 18:18:55.560#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processArchiveTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaArchiveStep] MTA Archive ID: 2d224621-6a0a-48f7-945b-e11442fb4d0b#
+
+#2.0#2019 02 13 18:18:55.561#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processArchiveTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaArchiveStep] MTA Archive Modules: [service, db]#
+
+#2.0#2019 02 13 18:18:55.561#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processArchiveTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaArchiveStep] MTA Archive Requires: []#
+
+#2.0#2019 02 13 18:18:55.561#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processArchiveTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaArchiveStep] MTA Archive Resources: []#
+
+#2.0#2019 02 13 18:18:55.565#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processArchiveTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaArchiveStep] MTA archive processed#
+
+#2.0#2019 02 13 18:18:55.566#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processArchiveTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+Step "Process Archive" finished#
+
+#2.0#2019 02 13 18:18:55.590#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processExtensionDescriptorsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaExtensionDescriptorsStep] Executing task "processExtensionDescriptorsTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:55.592#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processExtensionDescriptorsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaExtensionDescriptorsStep] Processing MTA extension descriptors...#
+
+#2.0#2019 02 13 18:18:55.593#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processExtensionDescriptorsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaExtensionDescriptorsStep] Еxtension descriptor/s: []#
+
+#2.0#2019 02 13 18:18:55.593#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processExtensionDescriptorsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[ProcessMtaExtensionDescriptorsStep] MTA extension descriptors processed#
+
+#2.0#2019 02 13 18:18:55.594#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processExtensionDescriptorsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+Step "Process Extension Descriptors" finished#
+
+#2.0#2019 02 13 18:18:55.614#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectSchemaVersionTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectMtaSchemaVersionStep] Executing task "detectSchemaVersionTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:55.615#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectSchemaVersionTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectMtaSchemaVersionStep] Detecting MTA major schema version...#
+
+#2.0#2019 02 13 18:18:55.617#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectSchemaVersionTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectMtaSchemaVersionStep] Detected MTA schema version: "3"#
+
+#2.0#2019 02 13 18:18:55.619#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectSchemaVersionTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+Step "Detect Schema Version" finished#
+
+#2.0#2019 02 13 18:18:55.639#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectTargetTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectTargetStep] Executing task "detectTargetTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:55.640#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectTargetTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectTargetStep] Detecting deploy target...#
+
+#2.0#2019 02 13 18:18:55.642#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectTargetTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectTargetStep] Deploying in org "P2001081098trial_p2001081098trial" and space "dev"#
+
+#2.0#2019 02 13 18:18:55.644#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectTargetTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+Step "Detect Target" finished#
+
+#2.0#2019 02 13 18:18:55.665#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.mergeDescriptorsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[MergeDescriptorsStep] Executing task "mergeDescriptorsTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:55.666#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.mergeDescriptorsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[MergeDescriptorsStep] Validating and merging descriptors...#
+
+#2.0#2019 02 13 18:18:55.670#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.mergeDescriptorsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[MergeDescriptorsStep] Merged deployment descriptor: {
+  "modules3": [
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_db",
+          "properties": {}
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "db",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "disk_quota": "128M",
+        "memory": "128M"
+      },
+      "name": "db",
+      "type": "com.sap.xs.hdi",
+      "properties": {}
+    },
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_db",
+          "properties": {},
+          "parameters": {}
+        },
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_service",
+          "properties": {
+            "url": "${default-url}"
+          }
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "service",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "disk_quota": "128M",
+        "memory": "128M"
+      },
+      "name": "service",
+      "type": "javascript.nodejs",
+      "properties": {}
+    }
+  ],
+  "resources3": [
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "hdi-shared",
+        "config": {
+          "schema": "MT"
+        },
+        "service": "hanatrial"
+      },
+      "name": "pt_hdi",
+      "type": "com.sap.xs.hdi-container",
+      "properties": {
+        "hdi-container-name": "${service-name}"
+      }
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service": "connectivity",
+        "service-plan": "lite"
+      },
+      "name": "pt_conn",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service": "destination",
+        "service-plan": "lite"
+      },
+      "name": "pt_dest",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    }
+  ],
+  "parametersMetadata": {
+    "metadata": {}
+  },
+  "parameters": {},
+  "schemaVersion": "3.1.0",
+  "id": "hw3",
+  "version": "0.0.1"
+}#
+
+#2.0#2019 02 13 18:18:55.671#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.mergeDescriptorsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[MergeDescriptorsStep] Descriptors validated and merged#
+
+#2.0#2019 02 13 18:18:55.672#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.mergeDescriptorsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+Step "Merge Descriptors" finished#
+
+#2.0#2019 02 13 18:18:55.693#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectDeployedMtaTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectDeployedMtaStep] Executing task "detectDeployedMtaTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:55.694#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectDeployedMtaTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectDeployedMtaStep] Detecting deployed MTA...#
+
+#2.0#2019 02 13 18:18:58.589#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectDeployedMtaTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectDeployedMtaStep] Deployed MTA: {
+  "metadata": {
+    "id": "hw3",
+    "version": "0.0.0-unknown"
+  },
+  "modules": [
+    {
+      "moduleName": "router",
+      "appName": "router",
+      "createdOn": "Feb 8, 2019 1:04:11 PM",
+      "updatedOn": "Feb 13, 2019 1:18:45 PM",
+      "services": [
+        "pt_router",
+        "pt_dest",
+        "pt_uaa"
+      ],
+      "providedDependencyNames": [],
+      "uris": [
+        "p2001081098trial-p2001081098trial-dev-router.cfapps.eu10.hana.ondemand.com"
+      ]
+    },
+    {
+      "moduleName": "javarest",
+      "appName": "javarest",
+      "createdOn": "Feb 12, 2019 12:54:18 PM",
+      "updatedOn": "Feb 13, 2019 1:16:56 PM",
+      "services": [
+        "pt_hdi",
+        "pt_dest",
+        "pt_uaa",
+        "pt_conn"
+      ],
+      "providedDependencyNames": [],
+      "uris": [
+        "p2001081098trial-p2001081098trial-dev-javarest.cfapps.eu10.hana.ondemand.com"
+      ]
+    },
+    {
+      "moduleName": "db",
+      "appName": "db",
+      "createdOn": "Feb 4, 2019 1:00:25 PM",
+      "updatedOn": "Feb 13, 2019 6:01:39 PM",
+      "services": [
+        "pt_hdi"
+      ],
+      "providedDependencyNames": [],
+      "uris": []
+    },
+    {
+      "moduleName": "service",
+      "appName": "service",
+      "createdOn": "Feb 4, 2019 1:01:27 PM",
+      "updatedOn": "Feb 13, 2019 6:04:09 PM",
+      "services": [
+        "pt_hdi"
+      ],
+      "providedDependencyNames": [],
+      "uris": [
+        "p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+      ]
+    },
+    {
+      "moduleName": "deployer",
+      "appName": "deployer",
+      "createdOn": "Feb 8, 2019 4:30:14 PM",
+      "updatedOn": "Feb 11, 2019 11:11:49 AM",
+      "services": [
+        "pt_deployer"
+      ],
+      "providedDependencyNames": [],
+      "uris": []
+    }
+  ],
+  "services": [
+    "pt_router",
+    "pt_conn",
+    "pt_uaa",
+    "pt_deployer",
+    "pt_dest",
+    "pt_hdi"
+  ]
+}#
+
+#2.0#2019 02 13 18:18:58.589#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectDeployedMtaTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectDeployedMtaStep] Detected deployed MTA with ID "hw3" and version "0.0.0-unknown"#
+
+#2.0#2019 02 13 18:18:58.592#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectDeployedMtaTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[DetectDeployedMtaStep] Deployed apps: [
+  {
+    "diskQuota": 4096,
+    "env": [
+      "DI_CORE_URL\u003dhttps://disapwebide.hanatrial.ondemand.com",
+      "HC_HOST\u003dhanatrial.ondemand.com",
+      "JAVA_OPTS\u003d-XX:ReservedCodeCacheSize\u003d120M",
+      "MAVEN_MEM_MAX\u003d512",
+      "NUM_OF_WORKERS\u003d-1",
+      "REGISTRATION_USER\u003da07e7789-ae8c-4d97-aa6f-a180f79cc79e",
+      "TARGET_RUNTIME\u003dtomcat",
+      "apps_npm_registry_auth\u003df0439c3f-d38d-3078-8446-52482c193eee",
+      "apps_npm_registry_url\u003dhttps://npm.sap.com/",
+      "********"
+    ],
+    "instances": 1,
+    "memory": 512,
+    "runningInstances": 1,
+    "services": [],
+    "staging": {
+      "buildpackUrl": "java_buildpack",
+      "detectedBuildpack": "",
+      "stack": "cflinuxfs3",
+      "healthCheckType": "port",
+      "sshEnabled": false
+    },
+    "packageState": "STAGED",
+    "state": "STARTED",
+    "uris": [
+      "webide-builder-di-sapwebide-EU-1-trial-zKQgm8zsweRf0ke5.cfapps.eu10.hana.ondemand.com"
+    ],
+    "meta": {
+      "created": "Feb 4, 2019 8:34:05 AM",
+      "guid": "1324a291-6651-4eeb-9f95-c395729e0cc9",
+      "updated": "Feb 4, 2019 9:26:27 AM",
+      "url": "/v2/apps/1324a291-6651-4eeb-9f95-c395729e0cc9"
+    },
+    "name": "webide-builder-di-sapwebide-EU-1-trial-zKQgm8zsweRf0ke5"
+  },
+  {
+    "diskQuota": 256,
+    "env": [
+      "DEPLOY_ATTRIBUTES\u003d{\n  \"app-content-digest\": \"4E1ACE146974FEC19CF07D9A233F8BB5\",\n  \"dependency-type\": \"hard\",\n  \"no-start\": true\n}",
+      "EXIT\u003d1",
+      "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.1\"\n}",
+      "MTA_MODULE_METADATA\u003d{\n  \"name\": \"db\"\n}",
+      "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]",
+      "MTA_SERVICES\u003d[\n  \"pt_hdi\"\n]"
+    ],
+    "instances": 1,
+    "memory": 128,
+    "runningInstances": 0,
+    "services": [
+      "pt_hdi"
+    ],
+    "staging": {
+      "detectedBuildpack": "nodejs",
+      "stack": "cflinuxfs3",
+      "healthCheckType": "port",
+      "sshEnabled": false
+    },
+    "packageState": "STAGED",
+    "state": "STOPPED",
+    "uris": [],
+    "meta": {
+      "created": "Feb 4, 2019 1:00:25 PM",
+      "guid": "b20df0be-ea2a-4fa3-bb69-567fee585cb1",
+      "updated": "Feb 13, 2019 6:01:39 PM",
+      "url": "/v2/apps/b20df0be-ea2a-4fa3-bb69-567fee585cb1"
+    },
+    "name": "db"
+  },
+  {
+    "diskQuota": 1024,
+    "env": [
+      "DEPLOY_ATTRIBUTES\u003d{\n  \"app-content-digest\": \"230DC5D4BF162DA7DFC20943211C6187\"\n}",
+      "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.1\"\n}",
+      "MTA_MODULE_METADATA\u003d{\n  \"name\": \"service\"\n}",
+      "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]",
+      "MTA_SERVICES\u003d[\n  \"pt_hdi\"\n]"
+    ],
+    "instances": 1,
+    "memory": 128,
+    "runningInstances": 1,
+    "services": [
+      "pt_hdi"
+    ],
+    "staging": {
+      "detectedBuildpack": "nodejs",
+      "stack": "cflinuxfs3",
+      "healthCheckType": "port",
+      "sshEnabled": false
+    },
+    "packageState": "STAGED",
+    "state": "STARTED",
+    "uris": [
+      "p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+    ],
+    "meta": {
+      "created": "Feb 4, 2019 1:01:27 PM",
+      "guid": "f335eae6-4a61-46d5-910d-82096eb4150a",
+      "updated": "Feb 13, 2019 6:04:09 PM",
+      "url": "/v2/apps/f335eae6-4a61-46d5-910d-82096eb4150a"
+    },
+    "name": "service"
+  },
+  {
+    "diskQuota": 256,
+    "env": [
+      "DEPLOY_ATTRIBUTES\u003d{\n  \"app-content-digest\": \"8A557649D44A940A1A5FEA0941A1CB24\"\n}",
+      "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.2\"\n}",
+      "MTA_MODULE_METADATA\u003d{\n  \"name\": \"router\"\n}",
+      "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]",
+      "MTA_SERVICES\u003d[\n  \"pt_router\",\n  \"pt_dest\",\n  \"pt_uaa\"\n]",
+      "destinations\u003d[\n  {\n    \"forwardAuthToken\": true,\n    \"name\": \"javarest\",\n    \"url\": \"https://p2001081098trial-p2001081098trial-dev-javarest.cfapps.eu10.hana.ondemand.com\"\n  }\n]"
+    ],
+    "instances": 1,
+    "memory": 128,
+    "runningInstances": 1,
+    "services": [
+      "pt_dest",
+      "pt_router",
+      "pt_uaa"
+    ],
+    "staging": {
+      "detectedBuildpack": "nodejs",
+      "stack": "cflinuxfs3",
+      "healthCheckType": "port",
+      "sshEnabled": false
+    },
+    "packageState": "STAGED",
+    "state": "STARTED",
+    "uris": [
+      "p2001081098trial-p2001081098trial-dev-router.cfapps.eu10.hana.ondemand.com"
+    ],
+    "meta": {
+      "created": "Feb 8, 2019 1:04:11 PM",
+      "guid": "ee96a327-a55f-4276-a720-f7e0aeda2d12",
+      "updated": "Feb 13, 2019 1:18:45 PM",
+      "url": "/v2/apps/ee96a327-a55f-4276-a720-f7e0aeda2d12"
+    },
+    "name": "router"
+  },
+  {
+    "diskQuota": 256,
+    "env": [
+      "DEPLOY_ATTRIBUTES\u003d{\n  \"app-content-digest\": \"F3C3A590BDBD87728928F266CD4B4242\",\n  \"check-deploy-id\": true,\n  \"dependency-type\": \"hard\",\n  \"execute-app\": true,\n  \"failure-marker\": \"STDERR:Deployment of html5 application content failed.*\",\n  \"stop-app\": true,\n  \"success-marker\": \"STDOUT:Deployment of html5 application content done.*\"\n}",
+      "DEPLOY_ID\u003ddeploy-39522587",
+      "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.1\"\n}",
+      "MTA_MODULE_METADATA\u003d{\n  \"name\": \"deployer\"\n}",
+      "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]",
+      "MTA_SERVICES\u003d[\n  \"pt_deployer\"\n]"
+    ],
+    "instances": 1,
+    "memory": 128,
+    "runningInstances": 0,
+    "services": [
+      "pt_deployer"
+    ],
+    "staging": {
+      "detectedBuildpack": "nodejs",
+      "stack": "cflinuxfs3",
+      "healthCheckType": "none",
+      "sshEnabled": false
+    },
+    "packageState": "STAGED",
+    "state": "STOPPED",
+    "uris": [],
+    "meta": {
+      "created": "Feb 8, 2019 4:30:14 PM",
+      "guid": "d1193067-923c-4bae-b9db-09f85163c5d5",
+      "updated": "Feb 11, 2019 11:11:49 AM",
+      "url": "/v2/apps/d1193067-923c-4bae-b9db-09f85163c5d5"
+    },
+    "name": "deployer"
+  },
+  {
+    "diskQuota": 512,
+    "env": [
+      "DEPLOY_ATTRIBUTES\u003d{\n  \"app-content-digest\": \"F3DD4AF409DF7F53F27CE2051D4470CE\"\n}",
+      "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.2\"\n}",
+      "MTA_MODULE_METADATA\u003d{\n  \"name\": \"javarest\"\n}",
+      "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]",
+      "MTA_SERVICES\u003d[\n  \"pt_hdi\",\n  \"pt_dest\",\n  \"pt_uaa\",\n  \"pt_conn\"\n]",
+      "TARGET_RUNTIME\u003dtomcat"
+    ],
+    "instances": 1,
+    "memory": 1024,
+    "runningInstances": 1,
+    "services": [
+      "pt_hdi",
+      "pt_dest",
+      "pt_uaa",
+      "pt_conn"
+    ],
+    "staging": {
+      "buildpackUrl": "sap_java_buildpack",
+      "detectedBuildpack": "",
+      "stack": "cflinuxfs3",
+      "healthCheckType": "port",
+      "sshEnabled": false
+    },
+    "packageState": "STAGED",
+    "state": "STARTED",
+    "uris": [
+      "p2001081098trial-p2001081098trial-dev-javarest.cfapps.eu10.hana.ondemand.com"
+    ],
+    "meta": {
+      "created": "Feb 12, 2019 12:54:18 PM",
+      "guid": "892128bc-9628-4cf4-bd15-69f69cd35ce6",
+      "updated": "Feb 13, 2019 1:16:56 PM",
+      "url": "/v2/apps/892128bc-9628-4cf4-bd15-69f69cd35ce6"
+    },
+    "name": "javarest"
+  }
+]#
+
+#2.0#2019 02 13 18:18:58.593#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.detectDeployedMtaTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+Step "Detect Deployed MTA" finished#
+
+#2.0#2019 02 13 18:18:58.619#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CollectSystemParametersStep] Executing task "collectSystemParametersTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:58.620#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CollectSystemParametersStep] Collecting system parameters...#
+
+#2.0#2019 02 13 18:18:58.643#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CollectSystemParametersStep] Default domain: cfapps.eu10.hana.ondemand.com#
+
+#2.0#2019 02 13 18:18:58.643#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CollectSystemParametersStep] Port based routing: false#
+
+#2.0#2019 02 13 18:18:58.646#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CollectSystemParametersStep] System parameters: {
+  "moduleParameters": {
+    "service": {
+      "default-url": "${protocol}://${default-uri}",
+      "generated-password": "********",
+      "default-uri": "${host}.${domain}",
+      "memory": "256M",
+      "instances": 1,
+      "default-host": "p2001081098trial-p2001081098trial-dev-service",
+      "buildpack": "",
+      "command": "",
+      "app-name": "service",
+      "protocol": "https",
+      "service-plan": "",
+      "disk-quota": -1,
+      "service": "",
+      "domain": "cfapps.eu10.hana.ondemand.com",
+      "host": "p2001081098trial-p2001081098trial-dev-service",
+      "generated-user": "t-v7IW8jn)fRP9B(",
+      "timestamp": "20190213181858"
+    },
+    "db": {
+      "default-url": "${protocol}://${default-uri}",
+      "generated-password": "********",
+      "default-uri": "${host}.${domain}",
+      "memory": "256M",
+      "instances": 1,
+      "default-host": "p2001081098trial-p2001081098trial-dev-db",
+      "buildpack": "",
+      "command": "",
+      "app-name": "db",
+      "protocol": "https",
+      "service-plan": "",
+      "disk-quota": -1,
+      "service": "",
+      "domain": "cfapps.eu10.hana.ondemand.com",
+      "host": "p2001081098trial-p2001081098trial-dev-db",
+      "generated-user": "-ub3bpdggd_hIK0l",
+      "timestamp": "20190213181858"
+    }
+  },
+  "generalParameters": {
+    "xs-api-url": "https://api.cf.eu10.hana.ondemand.com",
+    "authorization-url": "https://login.cf.eu10.hana.ondemand.com",
+    "deploy-url": "deploy-service.cfapps.eu10.hana.ondemand.com",
+    "org": "P2001081098trial_p2001081098trial",
+    "xs-type": "CF",
+    "deploy-target": "P2001081098trial_p2001081098trial dev",
+    "default-domain": "cfapps.eu10.hana.ondemand.com",
+    "xs-auth-url": "https://login.cf.eu10.hana.ondemand.com",
+    "user": "yury.sheverdak@leverx.com",
+    "space": "dev",
+    "controller-url": "https://api.cf.eu10.hana.ondemand.com"
+  },
+  "resourceParameters": {
+    "pt_conn": {
+      "service-name": "pt_conn",
+      "generated-password": "********",
+      "service-plan": "",
+      "service": "",
+      "generated-user": "C3\u0026yJm*Rg#TM0[Ob",
+      "default-xsappname": "pt_conn",
+      "default-container-name": "P2001081098TRIAL_P2001081098TRIAL_DEV_PT_CONN"
+    },
+    "pt_dest": {
+      "service-name": "pt_dest",
+      "generated-password": "********",
+      "service-plan": "",
+      "service": "",
+      "generated-user": "kY0nkS)fO5tS57\u0026r",
+      "default-xsappname": "pt_dest",
+      "default-container-name": "P2001081098TRIAL_P2001081098TRIAL_DEV_PT_DEST"
+    },
+    "pt_hdi": {
+      "service-name": "pt_hdi",
+      "generated-password": "********",
+      "service-plan": "",
+      "service": "",
+      "generated-user": "s4SRbnTwdOuITz_o",
+      "default-xsappname": "pt_hdi",
+      "default-container-name": "P2001081098TRIAL_P2001081098TRIAL_DEV_PT_HDI"
+    }
+  },
+  "singularPluralMapping": {
+    "idle-domain": "idle-domains",
+    "port": "ports",
+    "domain": "domains",
+    "host": "hosts",
+    "idle-port": "idle-ports",
+    "idle-host": "idle-hosts"
+  }
+}#
+
+#2.0#2019 02 13 18:18:58.646#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CollectSystemParametersStep] Version rule: SAME_HIGHER#
+
+#2.0#2019 02 13 18:18:58.647#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CollectSystemParametersStep] Detected new MTA version: "0.0.1"#
+
+#2.0#2019 02 13 18:18:58.649#Z#WARN#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CollectSystemParametersStep] Version rule will be ignored, as the deployed MTA is in inconsistent state#
+
+#2.0#2019 02 13 18:18:58.650#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CollectSystemParametersStep] MTA accepted for deployment#
+
+#2.0#2019 02 13 18:18:58.650#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CollectSystemParametersStep] System parameters collected#
+
+#2.0#2019 02 13 18:18:58.651#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.collectSystemParametersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+Step "Collect System Parameters" finished#
+
+#2.0#2019 02 13 18:18:58.681#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2ProcessDescriptorStep] Executing task "processDescriptorTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:58.682#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2ProcessDescriptorStep] Resolving properties and parameters in merged descriptor...#
+
+#2.0#2019 02 13 18:18:59.195#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2ProcessDescriptorStep] MTA Modules: [service, db]#
+
+#2.0#2019 02 13 18:18:59.197#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2ProcessDescriptorStep] Resolved deployment descriptor: {
+  "modules3": [
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_db",
+          "properties": {}
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "db",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "memory": "128M",
+        "no-route": true,
+        "dependency-type": "hard",
+        "disk_quota": "128M",
+        "EXIT": 1,
+        "tasks": [
+          {
+            "command": "npm start",
+            "memory": "256M",
+            "name": "deploy"
+          }
+        ],
+        "app-name": "db",
+        "no-start": true
+      },
+      "name": "db",
+      "type": "com.sap.xs.hdi",
+      "properties": {
+        "EXIT": 1
+      }
+    },
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_db",
+          "properties": {},
+          "parameters": {}
+        },
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_service",
+          "properties": {
+            "url": "https://p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+          }
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "service",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "disk_quota": "128M",
+        "memory": "128M",
+        "app-name": "service"
+      },
+      "name": "service",
+      "type": "javascript.nodejs",
+      "properties": {}
+    }
+  ],
+  "resources3": [
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "hdi-shared",
+        "hdi-container-name": "pt_hdi",
+        "service": "hanatrial",
+        "service-alternatives": [
+          "hanatrial"
+        ],
+        "type": "managed-service",
+        "config": {
+          "schema": "MT"
+        }
+      },
+      "name": "pt_hdi",
+      "type": "com.sap.xs.hdi-container",
+      "properties": {
+        "hdi-container-name": "pt_hdi"
+      }
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "connectivity"
+      },
+      "name": "pt_conn",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "destination"
+      },
+      "name": "pt_dest",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    }
+  ],
+  "parametersMetadata": {
+    "metadata": {}
+  },
+  "parameters": {},
+  "schemaVersion": "3.1.0",
+  "id": "hw3",
+  "version": "0.0.1"
+}#
+
+#2.0#2019 02 13 18:18:59.197#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2ProcessDescriptorStep] Merged descriptor properties and parameters resolved#
+
+#2.0#2019 02 13 18:18:59.201#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2ProcessDescriptorStep] Resolved deployment descriptor with ZDM enhancements: {
+  "modules3": [
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_db",
+          "properties": {}
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "db",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "memory": "128M",
+        "no-route": true,
+        "dependency-type": "hard",
+        "disk_quota": "128M",
+        "EXIT": 1,
+        "tasks": [
+          {
+            "command": "npm start",
+            "memory": "256M",
+            "name": "deploy"
+          }
+        ],
+        "app-name": "db",
+        "no-start": true
+      },
+      "name": "db",
+      "type": "com.sap.xs.hdi",
+      "properties": {
+        "EXIT": 1
+      }
+    },
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_db",
+          "properties": {},
+          "parameters": {}
+        },
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_service",
+          "properties": {
+            "url": "https://p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+          }
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "service",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "disk_quota": "128M",
+        "memory": "128M",
+        "app-name": "service"
+      },
+      "name": "service",
+      "type": "javascript.nodejs",
+      "properties": {}
+    }
+  ],
+  "resources3": [
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "hdi-shared",
+        "hdi-container-name": "pt_hdi",
+        "service": "hanatrial",
+        "service-alternatives": [
+          "hanatrial"
+        ],
+        "type": "managed-service",
+        "config": {
+          "schema": "MT"
+        }
+      },
+      "name": "pt_hdi",
+      "type": "com.sap.xs.hdi-container",
+      "properties": {
+        "hdi-container-name": "pt_hdi"
+      }
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "connectivity"
+      },
+      "name": "pt_conn",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "destination"
+      },
+      "name": "pt_dest",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    }
+  ],
+  "parametersMetadata": {
+    "metadata": {}
+  },
+  "parameters": {},
+  "schemaVersion": "3.1.0",
+  "id": "hw3",
+  "version": "0.0.1"
+}#
+
+#2.0#2019 02 13 18:18:59.202#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.processDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+Step "Process Descriptor Step" finished#
+
+#2.0#2019 02 13 18:18:59.235#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] Executing task "buildDeployModelTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:59.237#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] Building cloud deployment model...#
+
+#2.0#2019 02 13 18:18:59.240#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] MTA archive modules: [service, db]#
+
+#2.0#2019 02 13 18:18:59.240#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] Deployed modules: [db, deployer, javarest, router, service]#
+
+#2.0#2019 02 13 18:18:59.240#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] MTA modules: [service, db]#
+
+#2.0#2019 02 13 18:18:59.241#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] Service keys to create: {
+  "pt_conn": [],
+  "pt_dest": [],
+  "pt_hdi": []
+}#
+
+#2.0#2019 02 13 18:18:59.242#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] Modules to deploy: [
+  {
+    "name": "db",
+    "type": "com.sap.xs.hdi",
+    "deployedAfter": []
+  },
+  {
+    "name": "service",
+    "type": "javascript.nodejs",
+    "deployedAfter": []
+  }
+]#
+
+#2.0#2019 02 13 18:18:59.246#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] Apps to deploy: [
+  {
+    "moduleName": "db",
+    "idleUris": [],
+    "tasks": [
+      {
+        "command": "npm start",
+        "memory": 256,
+        "meta": {},
+        "name": "deploy"
+      }
+    ],
+    "serviceKeysToInject": [],
+    "applicationPorts": [],
+    "domains": [
+      "cfapps.eu10.hana.ondemand.com"
+    ],
+    "restartParameters": {
+      "shouldRestartOnVcapAppChange": true,
+      "shouldRestartOnVcapServicesChange": true,
+      "shouldRestartOnUserProvidedChange": true
+    },
+    "diskQuota": 0,
+    "env": [
+      "DEPLOY_ATTRIBUTES\u003d{\n  \"dependency-type\": \"hard\",\n  \"no-start\": true\n}",
+      "EXIT\u003d1",
+      "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.1\"\n}",
+      "MTA_MODULE_METADATA\u003d{\n  \"name\": \"db\"\n}",
+      "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]",
+      "MTA_SERVICES\u003d[\n  \"pt_hdi\"\n]"
+    ],
+    "instances": 0,
+    "memory": 128,
+    "runningInstances": 0,
+    "services": [
+      "pt_hdi"
+    ],
+    "staging": {},
+    "uris": [],
+    "meta": {},
+    "name": "db"
+  },
+  {
+    "moduleName": "service",
+    "idleUris": [],
+    "tasks": [],
+    "serviceKeysToInject": [],
+    "applicationPorts": [],
+    "domains": [
+      "cfapps.eu10.hana.ondemand.com"
+    ],
+    "restartParameters": {
+      "shouldRestartOnVcapAppChange": true,
+      "shouldRestartOnVcapServicesChange": true,
+      "shouldRestartOnUserProvidedChange": true
+    },
+    "diskQuota": 0,
+    "env": [
+      "DEPLOY_ATTRIBUTES\u003d{\n  \"dependency-type\": \"soft\"\n}",
+      "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.1\"\n}",
+      "MTA_MODULE_METADATA\u003d{\n  \"name\": \"service\"\n}",
+      "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]",
+      "MTA_SERVICES\u003d[\n  \"pt_hdi\"\n]"
+    ],
+    "instances": 0,
+    "memory": 128,
+    "runningInstances": 0,
+    "services": [
+      "pt_hdi"
+    ],
+    "staging": {},
+    "uris": [
+      "p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+    ],
+    "meta": {},
+    "name": "service"
+  }
+]#
+
+#2.0#2019 02 13 18:18:59.247#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] Custom domains: []#
+
+#2.0#2019 02 13 18:18:59.249#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] Services to create: [
+  {
+    "alternativeLabels": [
+      "hanatrial"
+    ],
+    "resourceName": "pt_hdi",
+    "credentials": {
+      "schema": "MT"
+    },
+    "tags": [],
+    "isOptional": false,
+    "isManaged": true,
+    "shouldIgnoreUpdateErrors": false,
+    "label": "hanatrial",
+    "plan": "hdi-shared",
+    "meta": {},
+    "name": "pt_hdi"
+  },
+  {
+    "alternativeLabels": [],
+    "resourceName": "pt_conn",
+    "credentials": {},
+    "tags": [],
+    "isOptional": false,
+    "isManaged": true,
+    "shouldIgnoreUpdateErrors": false,
+    "label": "connectivity",
+    "plan": "lite",
+    "meta": {},
+    "name": "pt_conn"
+  },
+  {
+    "alternativeLabels": [],
+    "resourceName": "pt_dest",
+    "credentials": {},
+    "tags": [],
+    "isOptional": false,
+    "isManaged": true,
+    "shouldIgnoreUpdateErrors": false,
+    "label": "destination",
+    "plan": "lite",
+    "meta": {},
+    "name": "pt_dest"
+  }
+]#
+
+#2.0#2019 02 13 18:18:59.250#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] Cloud deployment model built#
+
+#2.0#2019 02 13 18:18:59.255#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[XS2BuildCloudDeployModelStep] Contents to deploy: [
+  {
+    "moduleName": "db",
+    "idleUris": [],
+    "tasks": [
+      {
+        "command": "npm start",
+        "memory": 256,
+        "meta": {},
+        "name": "deploy"
+      }
+    ],
+    "serviceKeysToInject": [],
+    "applicationPorts": [],
+    "domains": [
+      "cfapps.eu10.hana.ondemand.com"
+    ],
+    "restartParameters": {
+      "shouldRestartOnVcapAppChange": true,
+      "shouldRestartOnVcapServicesChange": true,
+      "shouldRestartOnUserProvidedChange": true
+    },
+    "diskQuota": 0,
+    "env": [
+      "DEPLOY_ATTRIBUTES\u003d{\n  \"dependency-type\": \"hard\",\n  \"no-start\": true\n}",
+      "EXIT\u003d1",
+      "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.1\"\n}",
+      "MTA_MODULE_METADATA\u003d{\n  \"name\": \"db\"\n}",
+      "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]",
+      "MTA_SERVICES\u003d[\n  \"pt_hdi\"\n]"
+    ],
+    "instances": 0,
+    "memory": 128,
+    "runningInstances": 0,
+    "services": [
+      "pt_hdi"
+    ],
+    "staging": {},
+    "uris": [],
+    "meta": {},
+    "name": "db"
+  },
+  {
+    "moduleName": "service",
+    "idleUris": [],
+    "tasks": [],
+    "serviceKeysToInject": [],
+    "applicationPorts": [],
+    "domains": [
+      "cfapps.eu10.hana.ondemand.com"
+    ],
+    "restartParameters": {
+      "shouldRestartOnVcapAppChange": true,
+      "shouldRestartOnVcapServicesChange": true,
+      "shouldRestartOnUserProvidedChange": true
+    },
+    "diskQuota": 0,
+    "env": [
+      "DEPLOY_ATTRIBUTES\u003d{\n  \"dependency-type\": \"soft\"\n}",
+      "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.1\"\n}",
+      "MTA_MODULE_METADATA\u003d{\n  \"name\": \"service\"\n}",
+      "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]",
+      "MTA_SERVICES\u003d[\n  \"pt_hdi\"\n]"
+    ],
+    "instances": 0,
+    "memory": 128,
+    "runningInstances": 0,
+    "services": [
+      "pt_hdi"
+    ],
+    "staging": {},
+    "uris": [
+      "p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+    ],
+    "meta": {},
+    "name": "service"
+  }
+]#
+
+#2.0#2019 02 13 18:18:59.256#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+Step "Build Deploy Model" finished#
+
+#2.0#2019 02 13 18:18:59.293#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildUndeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[BuildCloudUndeployModelStep] Executing task "buildUndeployModelTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:59.295#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildUndeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[BuildCloudUndeployModelStep] Building cloud undeployment model...#
+
+#2.0#2019 02 13 18:18:59.300#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildUndeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[BuildCloudUndeployModelStep] MTA modules: [service, db]#
+
+#2.0#2019 02 13 18:18:59.300#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildUndeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[BuildCloudUndeployModelStep] Modules to undeploy: []#
+
+#2.0#2019 02 13 18:18:59.300#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildUndeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[BuildCloudUndeployModelStep] Modules to keep: [
+  {
+    "moduleName": "router",
+    "appName": "router",
+    "createdOn": "Feb 8, 2019 1:04:11 PM",
+    "updatedOn": "Feb 13, 2019 1:18:45 PM",
+    "services": [
+      "pt_router",
+      "pt_dest",
+      "pt_uaa"
+    ],
+    "providedDependencyNames": [],
+    "uris": [
+      "p2001081098trial-p2001081098trial-dev-router.cfapps.eu10.hana.ondemand.com"
+    ]
+  },
+  {
+    "moduleName": "javarest",
+    "appName": "javarest",
+    "createdOn": "Feb 12, 2019 12:54:18 PM",
+    "updatedOn": "Feb 13, 2019 1:16:56 PM",
+    "services": [
+      "pt_hdi",
+      "pt_dest",
+      "pt_uaa",
+      "pt_conn"
+    ],
+    "providedDependencyNames": [],
+    "uris": [
+      "p2001081098trial-p2001081098trial-dev-javarest.cfapps.eu10.hana.ondemand.com"
+    ]
+  },
+  {
+    "moduleName": "db",
+    "appName": "db",
+    "createdOn": "Feb 4, 2019 1:00:25 PM",
+    "updatedOn": "Feb 13, 2019 6:01:39 PM",
+    "services": [
+      "pt_hdi"
+    ],
+    "providedDependencyNames": [],
+    "uris": []
+  },
+  {
+    "moduleName": "service",
+    "appName": "service",
+    "createdOn": "Feb 4, 2019 1:01:27 PM",
+    "updatedOn": "Feb 13, 2019 6:04:09 PM",
+    "services": [
+      "pt_hdi"
+    ],
+    "providedDependencyNames": [],
+    "uris": [
+      "p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+    ]
+  },
+  {
+    "moduleName": "deployer",
+    "appName": "deployer",
+    "createdOn": "Feb 8, 2019 4:30:14 PM",
+    "updatedOn": "Feb 11, 2019 11:11:49 AM",
+    "services": [
+      "pt_deployer"
+    ],
+    "providedDependencyNames": [],
+    "uris": []
+  }
+]#
+
+#2.0#2019 02 13 18:18:59.301#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildUndeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[BuildCloudUndeployModelStep] Subscriptions to delete: []#
+
+#2.0#2019 02 13 18:18:59.302#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildUndeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[BuildCloudUndeployModelStep] Cloud services to delete: []#
+
+#2.0#2019 02 13 18:18:59.302#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildUndeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[BuildCloudUndeployModelStep] Cloud applications to undeploy: []#
+
+#2.0#2019 02 13 18:18:59.302#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildUndeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[BuildCloudUndeployModelStep] Cloud undeployment model built#
+
+#2.0#2019 02 13 18:18:59.303#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.buildUndeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+Step "Build Undeploy Model" finished#
+
+#2.0#2019 02 13 18:18:59.335#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CheckForCreationConflictsStep] Executing task "checkForCreationConflictsTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:18:59.338#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CheckForCreationConflictsStep] Validating services to create...#
+
+#2.0#2019 02 13 18:19:00.050#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CheckForCreationConflictsStep] Trying to validate association of service "pt_hdi"#
+
+#2.0#2019 02 13 18:19:00.050#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CheckForCreationConflictsStep] Trying to validate association of service "pt_conn"#
+
+#2.0#2019 02 13 18:19:00.050#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CheckForCreationConflictsStep] Trying to validate association of service "pt_dest"#
+
+#2.0#2019 02 13 18:19:00.050#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CheckForCreationConflictsStep] Services to create succesfully validated#
+
+#2.0#2019 02 13 18:19:00.050#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CheckForCreationConflictsStep] Validating applications to deploy...#
+
+#2.0#2019 02 13 18:19:00.052#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CheckForCreationConflictsStep] Trying to validate association of application "db"#
+
+#2.0#2019 02 13 18:19:00.052#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CheckForCreationConflictsStep] Trying to validate association of application "service"#
+
+#2.0#2019 02 13 18:19:00.052#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CheckForCreationConflictsStep] Applications to deploy succesfully validated#
+
+#2.0#2019 02 13 18:19:00.053#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkForCreationConflictsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Check For Creation Conflicts" finished#
+
+#2.0#2019 02 13 18:19:00.084#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.addDomainsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[AddDomainsStep] Executing task "addDomainsTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:19:00.086#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.addDomainsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[AddDomainsStep] Custom domains: []#
+
+#2.0#2019 02 13 18:19:00.087#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.addDomainsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Add Domains" finished#
+
+#2.0#2019 02 13 18:19:00.117#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteUnusedReservedRoutesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[DeleteUnusedReservedRoutesStep] Executing task "deleteUnusedReservedRoutesTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:19:00.119#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteUnusedReservedRoutesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[DeleteUnusedReservedRoutesStep] Deleting unused reserved routes...#
+
+#2.0#2019 02 13 18:19:00.120#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteUnusedReservedRoutesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[DeleteUnusedReservedRoutesStep] Unused reserved routes deleted#
+
+#2.0#2019 02 13 18:19:00.121#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteUnusedReservedRoutesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Delete Unused Reserved Routes" finished#
+
+#2.0#2019 02 13 18:19:00.156#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Executing task "createOrUpdateServicesTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:19:00.157#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Creating or updating services...#
+
+#2.0#2019 02 13 18:19:00.158#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Default tags: {}#
+
+#2.0#2019 02 13 18:19:00.942#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Existing services: [pt_dest, pt_router, pt_conn, pt_hdi, pt_uaa, pt_deployer]#
+
+#2.0#2019 02 13 18:19:00.943#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Service "pt_hdi" already exists#
+
+#2.0#2019 02 13 18:19:00.943#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Determining action to be performed on existing service...#
+
+#2.0#2019 02 13 18:19:01.216#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Service parameters should be updated#
+
+#2.0#2019 02 13 18:19:01.216#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] New parameters: {
+  "schema": "MT"
+}#
+
+#2.0#2019 02 13 18:19:01.216#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Existing service parameters: {}#
+
+#2.0#2019 02 13 18:19:01.306#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Updating service "pt_hdi"...#
+
+#2.0#2019 02 13 18:19:02.655#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Service "pt_hdi" updated#
+
+#2.0#2019 02 13 18:19:03.273#Z#WARN#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Service key "yury.sheverdak@leverx.com:D2@323e3afb-f4bf-4c56-a97a-1a6c33999714" for service "pt_hdi" will not be deleted, as the option for deleting discontinued service keys is not specified!#
+
+#2.0#2019 02 13 18:19:03.275#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Service "pt_conn" already exists#
+
+#2.0#2019 02 13 18:19:03.275#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Determining action to be performed on existing service...#
+
+#2.0#2019 02 13 18:19:03.569#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Service "pt_conn" is not modified and will not be updated#
+
+#2.0#2019 02 13 18:19:04.131#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Service "pt_dest" already exists#
+
+#2.0#2019 02 13 18:19:04.131#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Determining action to be performed on existing service...#
+
+#2.0#2019 02 13 18:19:04.470#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Service "pt_dest" is not modified and will not be updated#
+
+#2.0#2019 02 13 18:19:05.039#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Triggered service operations: {
+  "pt_hdi": "UPDATE"
+}#
+
+#2.0#2019 02 13 18:19:05.040#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[CreateOrUpdateServicesStep] Services created or updated#
+
+#2.0#2019 02 13 18:19:05.041#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Create Or Update Services" finished#
+
+#2.0#2019 02 13 18:19:17.000#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CreateOrUpdateServicesStep] Executing task "createOrUpdateServicesTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:19:17.001#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CreateOrUpdateServicesStep] Polling service operations...#
+
+#2.0#2019 02 13 18:19:17.115#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CreateOrUpdateServicesStep] Last operation for service "pt_hdi": {
+  "type": "UPDATE",
+  "description": "",
+  "state": "SUCCEEDED"
+}#
+
+#2.0#2019 02 13 18:19:17.115#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CreateOrUpdateServicesStep] Service "pt_hdi" updated#
+
+#2.0#2019 02 13 18:19:17.115#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CreateOrUpdateServicesStep] 1 of 1 done#
+
+#2.0#2019 02 13 18:19:17.117#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[CreateOrUpdateServicesStep] Remaining services to poll: []#
+
+#2.0#2019 02 13 18:19:17.118#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServicesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+Step "Create Or Update Services" finished#
+
+#2.0#2019 02 13 18:19:17.154#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareModulesDeploymentTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[PrepareModulesDeploymentStep] Executing task "prepareModulesDeploymentTask" of process "41676451"...#
+
+#2.0#2019 02 13 18:19:17.156#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareModulesDeploymentTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[PrepareModulesDeploymentStep] Preparing modules deployment...#
+
+#2.0#2019 02 13 18:19:17.157#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareModulesDeploymentTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+Step "Prepare Modules Deployment" finished#
+
+#2.0#2019 02 13 18:19:17.262#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.setAppToDeployTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[SetAppToDeployStep] Executing task "setAppToDeployTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:17.267#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.setAppToDeployTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Set App To Deploy" finished#
+
+#2.0#2019 02 13 18:19:17.299#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[XS2ProcessDescriptorStep] Executing task "reprocessDescriptorTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:17.301#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[XS2ProcessDescriptorStep] Resolving properties and parameters in merged descriptor...#
+
+#2.0#2019 02 13 18:19:17.753#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[XS2ProcessDescriptorStep] MTA Modules: [service, db]#
+
+#2.0#2019 02 13 18:19:17.755#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[XS2ProcessDescriptorStep] Resolved deployment descriptor: {
+  "modules3": [
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_db",
+          "properties": {}
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "db",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "memory": "128M",
+        "no-route": true,
+        "dependency-type": "hard",
+        "disk_quota": "128M",
+        "EXIT": 1,
+        "tasks": [
+          {
+            "command": "npm start",
+            "memory": "256M",
+            "name": "deploy"
+          }
+        ],
+        "app-name": "db",
+        "no-start": true
+      },
+      "name": "db",
+      "type": "com.sap.xs.hdi",
+      "properties": {
+        "EXIT": 1
+      }
+    },
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_db",
+          "properties": {},
+          "parameters": {}
+        },
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_service",
+          "properties": {
+            "url": "https://p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+          }
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "service",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "disk_quota": "128M",
+        "memory": "128M",
+        "app-name": "service"
+      },
+      "name": "service",
+      "type": "javascript.nodejs",
+      "properties": {}
+    }
+  ],
+  "resources3": [
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "hdi-shared",
+        "hdi-container-name": "pt_hdi",
+        "service": "hanatrial",
+        "service-alternatives": [
+          "hanatrial"
+        ],
+        "type": "managed-service",
+        "config": {
+          "schema": "MT"
+        }
+      },
+      "name": "pt_hdi",
+      "type": "com.sap.xs.hdi-container",
+      "properties": {
+        "hdi-container-name": "pt_hdi"
+      }
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "connectivity"
+      },
+      "name": "pt_conn",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "destination"
+      },
+      "name": "pt_dest",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    }
+  ],
+  "parametersMetadata": {
+    "metadata": {}
+  },
+  "parameters": {},
+  "schemaVersion": "3.1.0",
+  "id": "hw3",
+  "version": "0.0.1"
+}#
+
+#2.0#2019 02 13 18:19:17.755#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[XS2ProcessDescriptorStep] Merged descriptor properties and parameters resolved#
+
+#2.0#2019 02 13 18:19:17.760#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[XS2ProcessDescriptorStep] Resolved deployment descriptor with ZDM enhancements: {
+  "modules3": [
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_db",
+          "properties": {}
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "db",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "memory": "128M",
+        "no-route": true,
+        "dependency-type": "hard",
+        "disk_quota": "128M",
+        "EXIT": 1,
+        "tasks": [
+          {
+            "command": "npm start",
+            "memory": "256M",
+            "name": "deploy"
+          }
+        ],
+        "app-name": "db",
+        "no-start": true
+      },
+      "name": "db",
+      "type": "com.sap.xs.hdi",
+      "properties": {
+        "EXIT": 1
+      }
+    },
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_db",
+          "properties": {},
+          "parameters": {}
+        },
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_service",
+          "properties": {
+            "url": "https://p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+          }
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "service",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "disk_quota": "128M",
+        "memory": "128M",
+        "app-name": "service"
+      },
+      "name": "service",
+      "type": "javascript.nodejs",
+      "properties": {}
+    }
+  ],
+  "resources3": [
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "hdi-shared",
+        "hdi-container-name": "pt_hdi",
+        "service": "hanatrial",
+        "service-alternatives": [
+          "hanatrial"
+        ],
+        "type": "managed-service",
+        "config": {
+          "schema": "MT"
+        }
+      },
+      "name": "pt_hdi",
+      "type": "com.sap.xs.hdi-container",
+      "properties": {
+        "hdi-container-name": "pt_hdi"
+      }
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "connectivity"
+      },
+      "name": "pt_conn",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "destination"
+      },
+      "name": "pt_dest",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    }
+  ],
+  "parametersMetadata": {
+    "metadata": {}
+  },
+  "parameters": {},
+  "schemaVersion": "3.1.0",
+  "id": "hw3",
+  "version": "0.0.1"
+}#
+
+#2.0#2019 02 13 18:19:17.762#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Re-Process Descriptor Step" finished#
+
+#2.0#2019 02 13 18:19:17.798#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RebuildApplicationDeployModelStep] Executing task "rebuildApplicationDeployModelTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:17.800#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RebuildApplicationDeployModelStep] Building cloud deployment model for application "db"...#
+
+#2.0#2019 02 13 18:19:17.805#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RebuildApplicationDeployModelStep] App with updated environment: {
+  "moduleName": "db",
+  "idleUris": [],
+  "tasks": [
+    {
+      "command": "npm start",
+      "memory": 256,
+      "meta": {},
+      "name": "deploy"
+    }
+  ],
+  "serviceKeysToInject": [],
+  "applicationPorts": [],
+  "domains": [
+    "cfapps.eu10.hana.ondemand.com"
+  ],
+  "restartParameters": {
+    "shouldRestartOnVcapAppChange": true,
+    "shouldRestartOnVcapServicesChange": true,
+    "shouldRestartOnUserProvidedChange": true
+  },
+  "diskQuota": 0,
+  "env": [
+    "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.1\"\n}",
+    "MTA_SERVICES\u003d[\n  \"pt_hdi\"\n]",
+    "EXIT\u003d1",
+    "MTA_MODULE_METADATA\u003d{\n  \"name\": \"db\"\n}",
+    "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]",
+    "DEPLOY_ATTRIBUTES\u003d{\n  \"dependency-type\": \"hard\",\n  \"no-start\": true\n}"
+  ],
+  "instances": 0,
+  "memory": 128,
+  "runningInstances": 0,
+  "services": [
+    "pt_hdi"
+  ],
+  "staging": {},
+  "uris": [],
+  "meta": {},
+  "name": "db"
+}#
+
+#2.0#2019 02 13 18:19:17.807#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RebuildApplicationDeployModelStep] Configuration entries to publish: []#
+
+#2.0#2019 02 13 18:19:17.808#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RebuildApplicationDeployModelStep] Cloud deployment model for application built#
+
+#2.0#2019 02 13 18:19:17.809#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Re-Build Application Deploy Model" finished#
+
+#2.0#2019 02 13 18:19:17.849#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[CheckAppStep] Executing task "checkAppTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:17.851#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[CheckAppStep] Checking application "db"...#
+
+#2.0#2019 02 13 18:19:18.129#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[CheckAppStep] Application "db" exists#
+
+#2.0#2019 02 13 18:19:18.131#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Check App" finished#
+
+#2.0#2019 02 13 18:19:18.167#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reserveRoutesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[ReserveRoutesStep] Executing task "reserveRoutesTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:18.171#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reserveRoutesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Reserve Routes" finished#
+
+#2.0#2019 02 13 18:19:18.206#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UpdateAppStep] Executing task "updateAppTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:18.208#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UpdateAppStep] Updating application "db"...#
+
+#2.0#2019 02 13 18:19:18.211#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UpdateAppStep] Binding parameters for application "db": {}#
+
+#2.0#2019 02 13 18:19:18.211#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UpdateAppStep] Updated services: [pt_hdi]#
+
+#2.0#2019 02 13 18:19:18.528#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UpdateAppStep] Service "pt_hdi" will not be rebound to application "db" because the binding parameters are not modified#
+
+#2.0#2019 02 13 18:19:18.532#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UpdateAppStep] Application "db" is not modified and will not be updated#
+
+#2.0#2019 02 13 18:19:18.534#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Update App" finished#
+
+#2.0#2019 02 13 18:19:18.573#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Executing task "uploadAppTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:18.575#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Upload app timeout in seconds: 3,600#
+
+#2.0#2019 02 13 18:19:18.576#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Uploading application "db"...#
+
+#2.0#2019 02 13 18:19:18.577#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Uploading file "db/data.zip" for application "db"#
+
+#2.0#2019 02 13 18:19:19.770#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Resources checked#
+
+#2.0#2019 02 13 18:19:19.770#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Matched files count: 0#
+
+#2.0#2019 02 13 18:19:19.771#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Matched resources processed, total size is 8,127,062#
+
+#2.0#2019 02 13 18:19:20.397#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Started async upload of application "db"#
+
+#2.0#2019 02 13 18:19:20.399#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Upload App" finished#
+
+#2.0#2019 02 13 18:19:20.458#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/18c14c69-e288-4f0c-84c4-40deb967f6fe###
+[UploadAppStep] Upload status: processing_upload#
+
+#2.0#2019 02 13 18:19:25.542#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/18c14c69-e288-4f0c-84c4-40deb967f6fe###
+[UploadAppStep] Upload status: ready#
+
+#2.0#2019 02 13 18:19:25.542#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/18c14c69-e288-4f0c-84c4-40deb967f6fe###
+[UploadAppStep] Deleting temp file: META-INF/.sap_java_buildpack/tomcat/temp/3458986265495200397.zip#
+
+#2.0#2019 02 13 18:19:27.050#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[UploadAppStep] Executing task "uploadAppTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:27.053#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[UploadAppStep] Upload app timeout in seconds: 3,600#
+
+#2.0#2019 02 13 18:19:27.054#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[UploadAppStep] Checking upload status of application "db"...#
+
+#2.0#2019 02 13 18:19:27.154#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[UploadAppStep] Application "db" uploaded#
+
+#2.0#2019 02 13 18:19:27.159#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+Step "Upload App" finished#
+
+#2.0#2019 02 13 18:19:27.291#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.scaleAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[ScaleAppStep] Executing task "scaleAppTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:27.296#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.scaleAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[ScaleAppStep] Scaling application "db"...#
+
+#2.0#2019 02 13 18:19:27.297#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.scaleAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[ScaleAppStep] Application "db" scaled#
+
+#2.0#2019 02 13 18:19:27.300#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.scaleAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+Step "Scale App" finished#
+
+#2.0#2019 02 13 18:19:27.398#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.determineDesiredStateAchievingActionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[DetermineDesiredStateAchievingActionsStep] Executing task "determineDesiredStateAchievingActionsTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:27.675#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.determineDesiredStateAchievingActionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[DetermineDesiredStateAchievingActionsStep] Current state of application db: STOPPED#
+
+#2.0#2019 02 13 18:19:27.675#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.determineDesiredStateAchievingActionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[DetermineDesiredStateAchievingActionsStep] Desired state of application db: STOPPED#
+
+#2.0#2019 02 13 18:19:27.675#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.determineDesiredStateAchievingActionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[DetermineDesiredStateAchievingActionsStep] Actions that should be executed on application db: [STAGE]#
+
+#2.0#2019 02 13 18:19:27.679#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.determineDesiredStateAchievingActionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+Step "Determine Desired State Achieving Actions" finished#
+
+#2.0#2019 02 13 18:19:27.794#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[StageAppStep] Executing task "stageAppTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:27.800#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+[StageAppStep] Staging application "db"...#
+
+#2.0#2019 02 13 18:19:28.752#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-6###
+Step "Stage App" finished#
+
+#2.0#2019 02 13 18:19:37.032#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[StageAppStep] Executing task "stageAppTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:37.463#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[StageAppStep] Checking status of application "db"...#
+
+#2.0#2019 02 13 18:19:38.002#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Stage App" finished#
+
+#2.0#2019 02 13 18:19:47.049#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[StageAppStep] Executing task "stageAppTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:47.051#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[StageAppStep] Checking status of application "db"...#
+
+#2.0#2019 02 13 18:19:47.619#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[StageAppStep] Application "db" staged#
+
+#2.0#2019 02 13 18:19:48.079#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Stage App" finished#
+
+#2.0#2019 02 13 18:19:48.224#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareToExecuteTasksTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[PrepareToExecuteTasksStep] Executing task "prepareToExecuteTasksTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:48.228#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareToExecuteTasksTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Prepare To Execute Tasks" finished#
+
+#2.0#2019 02 13 18:19:48.273#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.executeTaskTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[ExecuteTaskStep] Executing task "executeTaskTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:48.276#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.executeTaskTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[ExecuteTaskStep] Executing task "deploy" on application "db"...#
+
+#2.0#2019 02 13 18:19:48.699#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.executeTaskTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Execute Task" finished#
+
+#2.0#2019 02 13 18:19:57.047#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.executeTaskTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[ExecuteTaskStep] Executing task "executeTaskTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:57.103#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.executeTaskTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[ExecuteTaskStep] Task execution status: succeeded#
+
+#2.0#2019 02 13 18:19:57.614#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.executeTaskTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Execute Task" finished#
+
+#2.0#2019 02 13 18:19:57.824#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.incrementTaskIndexTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[IncrementIndexStep] Executing task "incrementTaskIndexTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:57.828#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.incrementTaskIndexTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Increment Task Index" finished#
+
+#2.0#2019 02 13 18:19:57.876#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.publishProvidedDependenciesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[PublishConfigurationEntriesStep] Executing task "publishProvidedDependenciesTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:57.878#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.publishProvidedDependenciesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[PublishConfigurationEntriesStep] Publishing public provided dependencies for application "db"...#
+
+#2.0#2019 02 13 18:19:57.879#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.publishProvidedDependenciesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[PublishConfigurationEntriesStep] No public provided dependencies for publishing#
+
+#2.0#2019 02 13 18:19:57.880#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.publishProvidedDependenciesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Publish Provided Dependencies" finished#
+
+#2.0#2019 02 13 18:19:57.921#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesForAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[DeleteDiscontinuedConfigurationEntriesForAppStep] Executing task "deleteDiscontinuedConfigurationEntriesForAppTask" of process "41676771"...#
+
+#2.0#2019 02 13 18:19:57.924#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesForAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[DeleteDiscontinuedConfigurationEntriesForAppStep] Deleting discontinued configuration entries for application "db"...#
+
+#2.0#2019 02 13 18:19:57.928#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesForAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[DeleteDiscontinuedConfigurationEntriesForAppStep] Deleted entries: []#
+
+#2.0#2019 02 13 18:19:57.929#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesForAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[DeleteDiscontinuedConfigurationEntriesForAppStep] Discontinued configuration entries for application "db" deleted#
+
+#2.0#2019 02 13 18:19:57.930#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesForAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Delete Discontinued Configuration Entries" finished#
+
+#2.0#2019 02 13 18:19:58.064#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.setAppToDeployTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[SetAppToDeployStep] Executing task "setAppToDeployTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:19:58.068#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.setAppToDeployTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Set App To Deploy" finished#
+
+#2.0#2019 02 13 18:19:58.108#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[XS2ProcessDescriptorStep] Executing task "reprocessDescriptorTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:19:58.109#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[XS2ProcessDescriptorStep] Resolving properties and parameters in merged descriptor...#
+
+#2.0#2019 02 13 18:19:59.114#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[XS2ProcessDescriptorStep] MTA Modules: [service, db]#
+
+#2.0#2019 02 13 18:19:59.118#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[XS2ProcessDescriptorStep] Resolved deployment descriptor: {
+  "modules3": [
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_db",
+          "properties": {}
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "db",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "memory": "128M",
+        "no-route": true,
+        "dependency-type": "hard",
+        "disk_quota": "128M",
+        "EXIT": 1,
+        "tasks": [
+          {
+            "command": "npm start",
+            "memory": "256M",
+            "name": "deploy"
+          }
+        ],
+        "app-name": "db",
+        "no-start": true
+      },
+      "name": "db",
+      "type": "com.sap.xs.hdi",
+      "properties": {
+        "EXIT": 1
+      }
+    },
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_db",
+          "properties": {},
+          "parameters": {}
+        },
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_service",
+          "properties": {
+            "url": "https://p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+          }
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "service",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "disk_quota": "128M",
+        "memory": "128M",
+        "app-name": "service"
+      },
+      "name": "service",
+      "type": "javascript.nodejs",
+      "properties": {}
+    }
+  ],
+  "resources3": [
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "hdi-shared",
+        "hdi-container-name": "pt_hdi",
+        "service": "hanatrial",
+        "service-alternatives": [
+          "hanatrial"
+        ],
+        "type": "managed-service",
+        "config": {
+          "schema": "MT"
+        }
+      },
+      "name": "pt_hdi",
+      "type": "com.sap.xs.hdi-container",
+      "properties": {
+        "hdi-container-name": "pt_hdi"
+      }
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "connectivity"
+      },
+      "name": "pt_conn",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "destination"
+      },
+      "name": "pt_dest",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    }
+  ],
+  "parametersMetadata": {
+    "metadata": {}
+  },
+  "parameters": {},
+  "schemaVersion": "3.1.0",
+  "id": "hw3",
+  "version": "0.0.1"
+}#
+
+#2.0#2019 02 13 18:19:59.118#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[XS2ProcessDescriptorStep] Merged descriptor properties and parameters resolved#
+
+#2.0#2019 02 13 18:19:59.123#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[XS2ProcessDescriptorStep] Resolved deployment descriptor with ZDM enhancements: {
+  "modules3": [
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_db",
+          "properties": {}
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "db",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "memory": "128M",
+        "no-route": true,
+        "dependency-type": "hard",
+        "disk_quota": "128M",
+        "EXIT": 1,
+        "tasks": [
+          {
+            "command": "npm start",
+            "memory": "256M",
+            "name": "deploy"
+          }
+        ],
+        "app-name": "db",
+        "no-start": true
+      },
+      "name": "db",
+      "type": "com.sap.xs.hdi",
+      "properties": {
+        "EXIT": 1
+      }
+    },
+    {
+      "requiredDependencies3": [
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_db",
+          "properties": {},
+          "parameters": {}
+        },
+        {
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "name": "pt_hdi",
+          "properties": {},
+          "parameters": {}
+        }
+      ],
+      "providedDependencies3": [
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "pt_service",
+          "properties": {
+            "url": "https://p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+          }
+        },
+        {
+          "parameters": {},
+          "propertiesMetadata": {
+            "metadata": {}
+          },
+          "parametersMetadata": {
+            "metadata": {}
+          },
+          "isPublic": false,
+          "name": "service",
+          "properties": {}
+        }
+      ],
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "parameters": {
+        "disk_quota": "128M",
+        "memory": "128M",
+        "app-name": "service"
+      },
+      "name": "service",
+      "type": "javascript.nodejs",
+      "properties": {}
+    }
+  ],
+  "resources3": [
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "hdi-shared",
+        "hdi-container-name": "pt_hdi",
+        "service": "hanatrial",
+        "service-alternatives": [
+          "hanatrial"
+        ],
+        "type": "managed-service",
+        "config": {
+          "schema": "MT"
+        }
+      },
+      "name": "pt_hdi",
+      "type": "com.sap.xs.hdi-container",
+      "properties": {
+        "hdi-container-name": "pt_hdi"
+      }
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "connectivity"
+      },
+      "name": "pt_conn",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    },
+    {
+      "isActive": true,
+      "propertiesMetadata": {
+        "metadata": {}
+      },
+      "parametersMetadata": {
+        "metadata": {}
+      },
+      "requiredDependencies3": [],
+      "isOptional": false,
+      "parameters": {
+        "service-plan": "lite",
+        "type": "managed-service",
+        "service": "destination"
+      },
+      "name": "pt_dest",
+      "type": "org.cloudfoundry.managed-service",
+      "properties": {}
+    }
+  ],
+  "parametersMetadata": {
+    "metadata": {}
+  },
+  "parameters": {},
+  "schemaVersion": "3.1.0",
+  "id": "hw3",
+  "version": "0.0.1"
+}#
+
+#2.0#2019 02 13 18:19:59.125#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reprocessDescriptorTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Re-Process Descriptor Step" finished#
+
+#2.0#2019 02 13 18:19:59.180#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[RebuildApplicationDeployModelStep] Executing task "rebuildApplicationDeployModelTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:19:59.183#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[RebuildApplicationDeployModelStep] Building cloud deployment model for application "service"...#
+
+#2.0#2019 02 13 18:19:59.188#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[RebuildApplicationDeployModelStep] App with updated environment: {
+  "moduleName": "service",
+  "idleUris": [],
+  "tasks": [],
+  "serviceKeysToInject": [],
+  "applicationPorts": [],
+  "domains": [
+    "cfapps.eu10.hana.ondemand.com"
+  ],
+  "restartParameters": {
+    "shouldRestartOnVcapAppChange": true,
+    "shouldRestartOnVcapServicesChange": true,
+    "shouldRestartOnUserProvidedChange": true
+  },
+  "diskQuota": 0,
+  "env": [
+    "MTA_METADATA\u003d{\n  \"id\": \"hw3\",\n  \"version\": \"0.0.1\"\n}",
+    "MTA_SERVICES\u003d[\n  \"pt_hdi\"\n]",
+    "MTA_MODULE_METADATA\u003d{\n  \"name\": \"service\"\n}",
+    "MTA_MODULE_PROVIDED_DEPENDENCIES\u003d[]"
+  ],
+  "instances": 0,
+  "memory": 128,
+  "runningInstances": 0,
+  "services": [
+    "pt_hdi"
+  ],
+  "staging": {},
+  "uris": [
+    "p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"
+  ],
+  "meta": {},
+  "name": "service"
+}#
+
+#2.0#2019 02 13 18:19:59.190#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[RebuildApplicationDeployModelStep] Configuration entries to publish: []#
+
+#2.0#2019 02 13 18:19:59.190#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[RebuildApplicationDeployModelStep] Cloud deployment model for application built#
+
+#2.0#2019 02 13 18:19:59.192#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.rebuildApplicationDeployModelTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Re-Build Application Deploy Model" finished#
+
+#2.0#2019 02 13 18:19:59.243#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[CheckAppStep] Executing task "checkAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:19:59.245#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[CheckAppStep] Checking application "service"...#
+
+#2.0#2019 02 13 18:19:59.892#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[CheckAppStep] Application "service" exists#
+
+#2.0#2019 02 13 18:19:59.894#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.checkAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Check App" finished#
+
+#2.0#2019 02 13 18:19:59.939#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reserveRoutesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[ReserveRoutesStep] Executing task "reserveRoutesTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:19:59.943#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.reserveRoutesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Reserve Routes" finished#
+
+#2.0#2019 02 13 18:19:59.987#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UpdateAppStep] Executing task "updateAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:19:59.990#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UpdateAppStep] Updating application "service"...#
+
+#2.0#2019 02 13 18:19:59.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UpdateAppStep] Binding parameters for application "service": {}#
+
+#2.0#2019 02 13 18:19:59.992#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UpdateAppStep] Updated services: [pt_hdi]#
+
+#2.0#2019 02 13 18:20:00.271#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UpdateAppStep] Service "pt_hdi" will not be rebound to application "service" because the binding parameters are not modified#
+
+#2.0#2019 02 13 18:20:00.276#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UpdateAppStep] Application "service" is not modified and will not be updated#
+
+#2.0#2019 02 13 18:20:00.278#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+Step "Update App" finished#
+
+#2.0#2019 02 13 18:20:00.326#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UploadAppStep] Executing task "uploadAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:20:00.328#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UploadAppStep] Upload app timeout in seconds: 3,600#
+
+#2.0#2019 02 13 18:20:00.329#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UploadAppStep] Uploading application "service"...#
+
+#2.0#2019 02 13 18:20:00.330#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UploadAppStep] Uploading file "service/data.zip" for application "service"#
+
+#2.0#2019 02 13 18:20:07.010#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UploadAppStep] Resources checked#
+
+#2.0#2019 02 13 18:20:07.010#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UploadAppStep] Matched files count: 0#
+
+#2.0#2019 02 13 18:20:07.011#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UploadAppStep] Matched resources processed, total size is 160,736,933#
+
+#2.0#2019 02 13 18:20:19.966#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[UploadAppStep] Started async upload of application "service"#
+
+#2.0#2019 02 13 18:20:19.968#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+Step "Upload App" finished#
+
+#2.0#2019 02 13 18:20:27.103#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-9###
+[UploadAppStep] Executing task "uploadAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:20:27.105#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-9###
+[UploadAppStep] Upload app timeout in seconds: 3,600#
+
+#2.0#2019 02 13 18:20:27.106#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-9###
+[UploadAppStep] Checking upload status of application "service"...#
+
+#2.0#2019 02 13 18:20:27.184#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-9###
+Step "Upload App" finished#
+
+#2.0#2019 02 13 18:20:20.065#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/b0868908-05f8-4935-815a-da8f3298c528###
+[UploadAppStep] Upload status: processing_upload#
+
+#2.0#2019 02 13 18:20:25.141#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/b0868908-05f8-4935-815a-da8f3298c528###
+[UploadAppStep] Upload status: processing_upload#
+
+#2.0#2019 02 13 18:20:30.208#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/b0868908-05f8-4935-815a-da8f3298c528###
+[UploadAppStep] Upload status: processing_upload#
+
+#2.0#2019 02 13 18:20:35.279#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/b0868908-05f8-4935-815a-da8f3298c528###
+[UploadAppStep] Upload status: processing_upload#
+
+#2.0#2019 02 13 18:20:37.092#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Executing task "uploadAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:20:37.096#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Upload app timeout in seconds: 3,600#
+
+#2.0#2019 02 13 18:20:37.096#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[UploadAppStep] Checking upload status of application "service"...#
+
+#2.0#2019 02 13 18:20:37.175#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Upload App" finished#
+
+#2.0#2019 02 13 18:20:40.348#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/b0868908-05f8-4935-815a-da8f3298c528###
+[UploadAppStep] Upload status: processing_upload#
+
+#2.0#2019 02 13 18:20:47.086#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/b0868908-05f8-4935-815a-da8f3298c528###
+[UploadAppStep] Upload status: processing_upload#
+
+#2.0#2019 02 13 18:20:47.103#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[UploadAppStep] Executing task "uploadAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:20:47.106#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[UploadAppStep] Upload app timeout in seconds: 3,600#
+
+#2.0#2019 02 13 18:20:47.106#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[UploadAppStep] Checking upload status of application "service"...#
+
+#2.0#2019 02 13 18:20:47.183#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[UploadAppStep] Application "service" uploaded#
+
+#2.0#2019 02 13 18:20:47.185#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Upload App" finished#
+
+#2.0#2019 02 13 18:20:47.231#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.scaleAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[ScaleAppStep] Executing task "scaleAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:20:47.235#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.scaleAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[ScaleAppStep] Scaling application "service"...#
+
+#2.0#2019 02 13 18:20:47.235#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.scaleAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[ScaleAppStep] Application "service" scaled#
+
+#2.0#2019 02 13 18:20:47.236#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.scaleAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Scale App" finished#
+
+#2.0#2019 02 13 18:20:47.281#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.determineDesiredStateAchievingActionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[DetermineDesiredStateAchievingActionsStep] Executing task "determineDesiredStateAchievingActionsTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:20:47.826#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.determineDesiredStateAchievingActionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[DetermineDesiredStateAchievingActionsStep] Current state of application service: STARTED#
+
+#2.0#2019 02 13 18:20:47.826#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.determineDesiredStateAchievingActionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[DetermineDesiredStateAchievingActionsStep] Desired state of application service: STARTED#
+
+#2.0#2019 02 13 18:20:47.826#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.determineDesiredStateAchievingActionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[DetermineDesiredStateAchievingActionsStep] Actions that should be executed on application service: [START, STAGE, STOP]#
+
+#2.0#2019 02 13 18:20:47.828#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.determineDesiredStateAchievingActionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Determine Desired State Achieving Actions" finished#
+
+#2.0#2019 02 13 18:20:47.876#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stopAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[StopAppStep] Executing task "stopAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:20:47.879#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stopAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[StopAppStep] Stopping application "service"...#
+
+#2.0#2019 02 13 18:20:48.801#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stopAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[StopAppStep] Application "service" stopped#
+
+#2.0#2019 02 13 18:20:48.802#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stopAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Stop App" finished#
+
+#2.0#2019 02 13 18:20:48.849#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[StageAppStep] Executing task "stageAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:20:48.851#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+[StageAppStep] Staging application "service"...#
+
+#2.0#2019 02 13 18:20:49.419#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-7###
+Step "Stage App" finished#
+
+#2.0#2019 02 13 18:20:52.164#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/b0868908-05f8-4935-815a-da8f3298c528###
+[UploadAppStep] Upload status: ready#
+
+#2.0#2019 02 13 18:20:52.165#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.uploadAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########App upload monitor: https://api.cf.eu10.hana.ondemand.com/v3/packages/b0868908-05f8-4935-815a-da8f3298c528###
+[UploadAppStep] Deleting temp file: META-INF/.sap_java_buildpack/tomcat/temp/849130606489884791.zip#
+
+#2.0#2019 02 13 18:20:57.143#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[StageAppStep] Executing task "stageAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:20:57.147#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[StageAppStep] Checking status of application "service"...#
+
+#2.0#2019 02 13 18:20:58.001#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Stage App" finished#
+
+#2.0#2019 02 13 18:21:07.134#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[StageAppStep] Executing task "stageAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:21:07.136#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+[StageAppStep] Checking status of application "service"...#
+
+#2.0#2019 02 13 18:21:07.901#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-8###
+Step "Stage App" finished#
+
+#2.0#2019 02 13 18:21:17.141#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[StageAppStep] Executing task "stageAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:21:17.144#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+[StageAppStep] Checking status of application "service"...#
+
+#2.0#2019 02 13 18:21:17.915#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-1###
+Step "Stage App" finished#
+
+#2.0#2019 02 13 18:21:27.151#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[StageAppStep] Executing task "stageAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:21:27.165#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[StageAppStep] Checking status of application "service"...#
+
+#2.0#2019 02 13 18:21:27.897#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[StageAppStep] Application "service" staged#
+
+#2.0#2019 02 13 18:21:28.528#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.stageAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Stage App" finished#
+
+#2.0#2019 02 13 18:21:28.831#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RestartAppStep] Executing task "startAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:21:29.280#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RestartAppStep] Starting application "service"...#
+
+#2.0#2019 02 13 18:21:30.164#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Start App" finished#
+
+#2.0#2019 02 13 18:21:37.156#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-9###
+[RestartAppStep] Executing task "startAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:21:37.158#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-9###
+[RestartAppStep] Checking status of application "service"...#
+
+#2.0#2019 02 13 18:21:37.731#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-9###
+[RestartAppStep] Application "service": 0 of 1 instances running (1 starting)#
+
+#2.0#2019 02 13 18:21:38.532#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-9###
+Step "Start App" finished#
+
+#2.0#2019 02 13 18:21:47.172#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RestartAppStep] Executing task "startAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:21:47.175#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RestartAppStep] Checking status of application "service"...#
+
+#2.0#2019 02 13 18:21:49.104#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RestartAppStep] Application "service": 1 of 1 instances running (1 running)#
+
+#2.0#2019 02 13 18:21:49.985#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+[RestartAppStep] Application "service" started and available at "p2001081098trial-p2001081098trial-dev-service.cfapps.eu10.hana.ondemand.com"#
+
+#2.0#2019 02 13 18:21:49.990#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-10###
+Step "Start App" finished#
+
+#2.0#2019 02 13 18:21:57.184#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[RestartAppStep] Executing task "startAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:21:57.187#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.startAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Start App" finished#
+
+#2.0#2019 02 13 18:21:57.233#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareToExecuteTasksTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[PrepareToExecuteTasksStep] Executing task "prepareToExecuteTasksTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:21:57.236#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareToExecuteTasksTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Prepare To Execute Tasks" finished#
+
+#2.0#2019 02 13 18:21:57.287#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.publishProvidedDependenciesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[PublishConfigurationEntriesStep] Executing task "publishProvidedDependenciesTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:21:57.288#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.publishProvidedDependenciesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[PublishConfigurationEntriesStep] Publishing public provided dependencies for application "service"...#
+
+#2.0#2019 02 13 18:21:57.289#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.publishProvidedDependenciesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[PublishConfigurationEntriesStep] No public provided dependencies for publishing#
+
+#2.0#2019 02 13 18:21:57.290#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.publishProvidedDependenciesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Publish Provided Dependencies" finished#
+
+#2.0#2019 02 13 18:21:57.337#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesForAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteDiscontinuedConfigurationEntriesForAppStep] Executing task "deleteDiscontinuedConfigurationEntriesForAppTask" of process "41679207"...#
+
+#2.0#2019 02 13 18:21:57.339#Z#INFO#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesForAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteDiscontinuedConfigurationEntriesForAppStep] Deleting discontinued configuration entries for application "service"...#
+
+#2.0#2019 02 13 18:21:57.344#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesForAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteDiscontinuedConfigurationEntriesForAppStep] Deleted entries: []#
+
+#2.0#2019 02 13 18:21:57.344#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesForAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteDiscontinuedConfigurationEntriesForAppStep] Discontinued configuration entries for application "service" deleted#
+
+#2.0#2019 02 13 18:21:57.345#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesForAppTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Delete Discontinued Configuration Entries" finished#
+
+#2.0#2019 02 13 18:21:57.445#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createSubscriptionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[CreateSubscriptionsStep] Executing task "createSubscriptionsTask" of process "41682694"...#
+
+#2.0#2019 02 13 18:21:57.446#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createSubscriptionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[CreateSubscriptionsStep] Creating subscriptions...#
+
+#2.0#2019 02 13 18:21:57.447#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createSubscriptionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[CreateSubscriptionsStep] Subscriptions created#
+
+#2.0#2019 02 13 18:21:57.448#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createSubscriptionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Create Subscriptions" finished#
+
+#2.0#2019 02 13 18:21:57.494#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.registerServiceUrlsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[RegisterServiceUrlsStep] Executing task "registerServiceUrlsTask" of process "41682694"...#
+
+#2.0#2019 02 13 18:21:57.495#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.registerServiceUrlsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[RegisterServiceUrlsStep] Registering service URLs...#
+
+#2.0#2019 02 13 18:21:57.496#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.registerServiceUrlsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[RegisterServiceUrlsStep] Client extensions are not supported#
+
+#2.0#2019 02 13 18:21:57.497#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.registerServiceUrlsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Register Service URLs" finished#
+
+#2.0#2019 02 13 18:21:57.542#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteSubscriptionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteSubscriptionsStep] Executing task "deleteSubscriptionsTask" of process "41682694"...#
+
+#2.0#2019 02 13 18:21:57.544#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteSubscriptionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteSubscriptionsStep] Deleting discontinued subscriptions...#
+
+#2.0#2019 02 13 18:21:57.544#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteSubscriptionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteSubscriptionsStep] Subscriptions to delete: []#
+
+#2.0#2019 02 13 18:21:57.544#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteSubscriptionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteSubscriptionsStep] Deleted discontinued subscriptions#
+
+#2.0#2019 02 13 18:21:57.545#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteSubscriptionsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Delete Subscriptions" finished#
+
+#2.0#2019 02 13 18:21:57.592#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteDiscontinuedConfigurationEntriesStep] Executing task "deleteDiscontinuedConfigurationEntriesTask" of process "41682694"...#
+
+#2.0#2019 02 13 18:21:57.593#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteDiscontinuedConfigurationEntriesStep] Deleting discontinued published dependencies...#
+
+#2.0#2019 02 13 18:21:57.617#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteDiscontinuedConfigurationEntriesStep] Deleted entries: []#
+
+#2.0#2019 02 13 18:21:57.618#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DeleteDiscontinuedConfigurationEntriesStep] Discontinued published dependencies deleted#
+
+#2.0#2019 02 13 18:21:57.618#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.deleteDiscontinuedConfigurationEntriesTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Delete Discontinued Configuration Entries" finished#
+
+#2.0#2019 02 13 18:21:57.665#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.unregisterServiceUrlsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[UnregisterServiceUrlsStep] Executing task "unregisterServiceUrlsTask" of process "41682694"...#
+
+#2.0#2019 02 13 18:21:57.667#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.unregisterServiceUrlsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[UnregisterServiceUrlsStep] Unregistering discontinued service URLs...#
+
+#2.0#2019 02 13 18:21:57.667#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.unregisterServiceUrlsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[UnregisterServiceUrlsStep] Client extensions are not supported#
+
+#2.0#2019 02 13 18:21:57.668#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.unregisterServiceUrlsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Unregister Service URLs" finished#
+
+#2.0#2019 02 13 18:21:57.712#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareToUndeployAppsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[PrepareToUndeployAppsStep] Executing task "prepareToUndeployAppsTask" of process "41682694"...#
+
+#2.0#2019 02 13 18:21:57.714#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareToUndeployAppsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[PrepareToUndeployAppsStep] Cloud applications to undeploy: []#
+
+#2.0#2019 02 13 18:21:57.715#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareToUndeployAppsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Prepare To Undeploy Apps" finished#
+
+#2.0#2019 02 13 18:21:57.752#Z#WARN#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareToUndeployAppsTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[DoNotDeleteServicesListener] Skipping deletion of services, because the command line option "--delete-services" is not specified.#
+
+#2.0#2019 02 13 18:21:57.801#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServiceBrokersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[CreateOrUpdateServiceBrokersStep] Executing task "createOrUpdateServiceBrokersTask" of process "41682694"...#
+
+#2.0#2019 02 13 18:21:57.803#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServiceBrokersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[CreateOrUpdateServiceBrokersStep] Creating service brokers...#
+
+#2.0#2019 02 13 18:21:58.752#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServiceBrokersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[CreateOrUpdateServiceBrokersStep] Service brokers: []#
+
+#2.0#2019 02 13 18:21:58.753#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServiceBrokersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+[CreateOrUpdateServiceBrokersStep] Service brokers created#
+
+#2.0#2019 02 13 18:21:58.754#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.createOrUpdateServiceBrokersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2###
+Step "Create Or Update Service Brokers" finished#
+
+#2.0#2019 02 13 18:21:58.805#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateSubscribersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[UpdateSubscribersStep] Executing task "updateSubscribersTask" of process "41682694"...#
+
+#2.0#2019 02 13 18:21:58.807#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateSubscribersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[UpdateSubscribersStep] Updating subscribers...#
+
+#2.0#2019 02 13 18:21:58.940#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateSubscribersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[UpdateSubscribersStep] Subscribers updated#
+
+#2.0#2019 02 13 18:21:58.941#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.updateSubscribersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Update Subscribers" finished#
+
+#2.0#2019 02 13 18:21:59.001#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.restartSubscribersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+[RestartSubscribersStep] Executing task "restartSubscribersTask" of process "41682694"...#
+
+#2.0#2019 02 13 18:21:59.004#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.restartSubscribersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-5###
+Step "Restart Subscribers" finished#
+
+#2.0#2019 02 13 18:21:59.055#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareToRestartServiceBrokerSubscribersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+[PrepareToRestartServiceBrokerSubscribersStep] Executing task "prepareToRestartServiceBrokerSubscribersTask" of process "41682694"...#
+
+#2.0#2019 02 13 18:21:59.059#Z#DEBUG#com.sap.cloud.lm.sl.xs2.41676427.MAIN_LOG.prepareToRestartServiceBrokerSubscribersTask#
+######com.sap.cloud.lm.sl.cf.persistence.services.ProcessLogger########flowable-async-job-executor-thread-3###
+Step "Prepare To Restart Service Brokers Subscribers" finished#
+
