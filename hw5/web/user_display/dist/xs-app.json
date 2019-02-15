@@ -1,7 +1,12 @@
 {  
    "welcomeFile":"/index.html",
    "authenticationMethod":"route",
-   "routes":[  
+   "routes":[
+   {
+      "source": "^/api/(.*)$",
+      "target": "$1",
+      "destination": "pt_service"
+   }, 
       {  
          "source":"^(.*)$",
          "target":"$1",
