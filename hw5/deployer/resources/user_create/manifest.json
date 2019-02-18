@@ -12,26 +12,9 @@
 		"sourceTemplate": {
 			"id": "html5moduletemplates.basicSAPUI5ApplicationProjectModule",
 			"version": "1.40.12"
-		},
-    "crossNavigation": {
-      "inbounds": {
-        "intent1": {
-          "signature": {
-            "parameters": {},
-            "additionalParameters": "allowed"
-          },
-          "semanticObject": "user_create",
-          "action": "manage"
-        }
-      }
-    }
-  },
-  "sap.platform.cf": {
-    "oAuthScopes": [
-      "hw3!t10689.himta.view",
-      "hw3!t10689.himta.edit"
-    ]
-  },
+		}
+	},
+
 	"sap.ui": {
 		"technology": "UI5",
 		"icons": {
@@ -53,22 +36,19 @@
 
 		]
 	},
-
 	"sap.ui5": {
-    "rootView": {
-      "viewName": "user_create.view.App",
-      "type": "XML"
-    },
+		"rootView": {
+			"viewName": "user_create.view.user_create",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
 		"dependencies": {
 			"minUI5Version": "1.60.1",
 			"libs": {
 				"sap.ui.core": {},
 				"sap.m": {},
-				"sap.ui.layout": {},
-				"sap.ushell": {},
-				"sap.collaboration": {},
-				"sap.ui.comp": {},
-				"sap.uxap": {}
+				"sap.ui.layout": {}				
 			}
 		},
 		"contentDensities": {

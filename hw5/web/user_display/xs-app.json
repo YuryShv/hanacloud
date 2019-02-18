@@ -2,20 +2,10 @@
    "welcomeFile":"/index.html",
    "authenticationMethod":"route",
    "routes":[
-   {
-      "source": "^/api/(.*)$",
-      "target": "$1",
-      "destination": "pt_service"
-   }, 
       {  
          "source":"^(.*)$",
          "target":"$1",
-         "service":"html5-apps-repo-rt",
-         "csrfProtection":true,
-         "authenticationType":"xsuaa",
-         "scope":{  
-            "default":"$XSAPPNAME.hw3.view"
-         }
+         "service":"html5-apps-repo-rt"
       }
    ]
 }

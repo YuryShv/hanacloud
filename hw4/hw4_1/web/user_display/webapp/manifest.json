@@ -15,7 +15,7 @@
 		},
 		"dataSources": {
 			"mainService": {
-				"uri": "/odata_resources/xsodata/hw3.xsodata",
+				"uri": "/api/xsodata/hw3.xsodata",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0"

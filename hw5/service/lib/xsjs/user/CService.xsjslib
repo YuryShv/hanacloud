@@ -1,8 +1,3 @@
-/**
- @param {connection} Connection - The SQL connection used in the OData request
- @param {beforeTableName} String - The name of a temporary table with the single entry before the operation (UPDATE and DELETE events only)
- @param {afterTableName} String -The name of a temporary table with the single entry after the operation (CREATE and UPDATE events only)
- */
 var CService = function(connection){
 this.recordSetToJSON = function (rs,rsName){
     rsName = typeof rsName !== 'undefined' ? rsName : 'entries';
@@ -123,7 +118,9 @@ function escapeSpecialCharsText (input) {
 }
 this.fillData = function(stmt, oValueObject){
     	stmt.setString(1, oValueObject.usid.toString());
-		stmt.setString(2, oValueObject.name.toString());	
+		stmt.setString(2, oValueObject.name.toString());
+        stmt.setTimestamp(3, (new Date()).toISOString());
+        stmt.setTimestamp(4, (new Date()).toISOString());
         stmt.executeUpdate();
         stmt.close();
 }

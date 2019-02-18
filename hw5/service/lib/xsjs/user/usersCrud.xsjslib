@@ -1,12 +1,8 @@
-/**
- @param {connection} Connection - The SQL connection used in the OData request
- @param {beforeTableName} String - The name of a temporary table with the single entry before the operation (UPDATE and DELETE events only)
- @param {afterTableName} String -The name of a temporary table with the single entry after the operation (CREATE and UPDATE events only)
- */
     const servicelb = $.import('xsjs.user', 'CService').CService;
     const service = new servicelb($.hdb.getConnection({
     treatDateAsUTC: true
 }));
+    const CURR_TIMESTAMP_FUN = "current_timestamp";
     const USER_TABLE = "hw3::User";
     const SEQ_NAME =   "hw3::usid";
 
@@ -19,7 +15,7 @@ function usersCreate(param){
     var oUserItems = service.recordSetToJSON(oResult, "items");
     var oUser = oUserItems.items[0];
     $.trace.error(JSON.stringify(oUser));
-    pStmt = param.connection.prepareStatement('select "hw3::usid".NEXTVAL from dummy'); 
+    pStmt = param.connection.prepareStatement(`select "${SEQ_NAME}".NEXTVAL from dummy`); 
 	var result = pStmt.executeQuery();
     $.trace.error("result: "+result);
     while (result.next()) {
@@ -28,10 +24,10 @@ function usersCreate(param){
     $.trace.error(JSON.stringify(oUser));
 	pStmt.close();
 		var pStmt;
-		pStmt = param.connection.prepareStatement(`insert into "${USER_TABLE}" values(?,?) `);
+		pStmt = param.connection.prepareStatement(`insert into "${USER_TABLE}" values(?,?,?,?) `);
         service.fillData(pStmt,oUser);			
 		pStmt = param.connection.prepareStatement(`TRUNCATE TABLE "${after}"`);
-		pStmt = param.connection.prepareStatement(`insert into "${after}" values(?,?)`);		
+		pStmt = param.connection.prepareStatement(`insert into "${after}" values(?,?,?,?)`);		
         service.fillData(pStmt,oUser);	
 }
 function usersUpdate(param){
@@ -42,7 +38,7 @@ function usersUpdate(param){
     var oUser = oUserItems.items[0];
     $.trace.error(JSON.stringify(oUser));
     var uStmt;
-    uStmt = param.connection.prepareStatement(`UPDATE "${USER_TABLE}" SET "name"='${oUser.name}' WHERE "usid"=${oUser.usid};`);
+    uStmt = param.connection.prepareStatement(`UPDATE "${USER_TABLE}" SET "name"='${oUser.name}',"ts_update" = ${CURR_TIMESTAMP_FUN} WHERE "usid"=${oUser.usid};`);
     uStmt.executeQuery();
 }
 

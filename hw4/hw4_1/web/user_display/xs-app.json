@@ -3,15 +3,15 @@
   "authenticationMethod": "none",
   "routes": [
     {
+      "source": "^/api/(.*)$",
+      "target": "$1",
+      "destination": "pt_service"
+    },
+    {
       "source": "^/user_display/(.*)$",
       "target": "$1",
       "localDir": "webapp",
       "authenticationType": "xsuaa"
-    },
-    {
-      "source": "^/odata_resources/(.*)$",
-      "target": "$1",
-      "destination": "odata_resources"
     }
   ]
 }

@@ -22,7 +22,7 @@ modules:
         requires:
             - {name: pt_db}
             - {name: pt_hdi}
-            - {name: pt_uaa}
+            #- {name: pt_uaa}
         provides:
             - {name: pt_service, properties: {url: '${default-url}'}}
         parameters:

@@ -14,7 +14,13 @@
           </Column>
           <Column id="userNameColumn">
             <Text text="{i18n>userNameText}" />
-          </Column>        
+          </Column>
+             <Column id="userUpdated">
+            <Text text="{i18n>userUpdateText}" />
+          </Column>
+            <Column id="userCreated">
+            <Text text="{i18n>userCreateText}" />
+          </Column>          
         </columns>
         <items>
           <ColumnListItem>
@@ -23,7 +29,13 @@
             </cells>
             <cells>
               <Label text="{users>name}" />
-            </cells>          
+            </cells>
+            <cells>
+              <Label text="{users>ts_update}" />
+            </cells>
+            <cells>
+              <Label text="{users>ts_create}" />
+            </cells>                      
           </ColumnListItem>
         </items>
       </Table>
