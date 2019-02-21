@@ -1,0 +1,18 @@
+namespace hw3;
+
+using hw3::ExtraInfo.Zoo;
+
+
+entity Animals {
+    @Comment: 'Id of Animal'
+    key aid : String(4);
+    @Comment: 'Name'
+    aname : String(24);
+    @Comment: 'Kind'
+    akind : String(16);   
+    @Comment: 'Update time'
+    ts_update : UTCDateTime;
+    @Comment: 'Create time'
+    ts_create : UTCDateTime;
+    toZoo : Association[1] to Zoo on toZoo.aid = aid;
+};

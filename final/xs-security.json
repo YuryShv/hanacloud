@@ -1,0 +1,54 @@
+{
+  "xsappname": "hw3",
+  "tenant-mode": "dedicated",
+  "description": "homework 5",
+  "scopes": [
+    {
+      "name": "uaa.user",
+      "description": "UAA"
+    },
+    {
+      "name": "$XSAPPNAME.hw3.view",
+      "description": "Display animals"
+    },
+    {
+      "name": "$XSAPPNAME.hw3.create",
+      "description": "Create animals"
+    }
+  ],
+  "attributes": [
+    {
+      "name": "client",
+      "description": "Session Client",
+      "valueType": "int"
+    }
+  ],
+  "role-templates": [
+    {
+      "name": "Token_Exchange",
+      "description": "UAA",
+      "scope-references": [
+        "uaa.user"
+      ]
+    },
+    {
+      "name": "Admin",
+      "description": "Can do anything",
+      "scope-references": [
+        "$XSAPPNAME.hw3.view",
+        "$XSAPPNAME.hw3.create"
+      ],
+      "attribute-references": [
+      ]
+    },
+    {
+      "name": "User",
+      "description": "Display mode only",
+      "scope-references": [
+        "$XSAPPNAME.hw3.view"
+      ],
+      "attribute-references": [
+      ]
+    }
+	  ]
+}

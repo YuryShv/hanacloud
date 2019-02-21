@@ -1,0 +1,62 @@
+<mvc:View controllerName="animal_display.controller.Display" xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:mvc="sap.ui.core.mvc" xmlns:tnt="sap.tnt">
+  <App id="app">
+  <Page>
+    <Panel id="AnimalPanel" headerText="{i18n>appTitle}" class="sapUiResponsiveMargin" width="auto">
+      <content>
+        <Table id="details" items="{
+      path: 'animals>/Animals'
+      }" mode="SingleSelectMaster" selectionChange="onSelect">
+          <columns>
+            <Column id="animalIdColumn">
+              <Text text="{i18n>animalIdText}" />
+            </Column>
+            <Column id="animalNameColumn">
+              <Text text="{i18n>animalNameText}" />
+            </Column>
+            <Column id="animalKindColumn">
+              <Text text="{i18n>animalKindText}" />
+            </Column>
+            <Column id="animalUpdated" width = "19%">
+              <Text text="{i18n>animalUpdateText}" />
+            </Column>
+            <Column id="animalCreated" width = "19%">
+              <Text text="{i18n>animalCreateText}"/>
+            </Column>
+            <Column></Column>
+            <Column></Column>
+            <Column><Button id="addButton" icon="sap-icon://create" text="Add" press=".showCreateDialog" enabled="true" width="100%" /></Column>
+          </columns>
+          <items>
+            <ColumnListItem>
+              <cells>
+                <Text text="{animals>aid}"/>
+              </cells>
+              <cells>
+                <Input value="{animals>aname}" enabled="false"/>
+              </cells>
+              <cells>
+                <Input value="{animals>akind}" enabled="false"/>
+              </cells>
+              <cells>
+                <Text text ="{animals>ts_update}"/>
+              </cells>
+              <cells>
+                <Text text="{animals>ts_create}"/>
+              </cells>
+              <cells>
+                <Button icon="sap-icon://save" text="Save" press=".animalsUpdate" enabled="false" width="100%" />
+              </cells>
+              <cells>
+                <Button icon="sap-icon://edit" text="Edit" press=".animalsEdit" enabled="false" width="100%" />
+              </cells>
+              <cells>
+                <Button icon="sap-icon://delete" text="Delete" press=".animalsDelete" enabled="false" width="100%" />
+              </cells>
+            </ColumnListItem>
+          </items>
+        </Table>
+      </content>
+    </Panel>
+  </Page>
+  </App>
+</mvc:View>

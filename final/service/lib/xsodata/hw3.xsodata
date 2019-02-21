@@ -1,0 +1,11 @@
+service namespace "hw3"{
+
+    "hw3::Animals" as "Animals"
+                navigates("Animals_2_Zoo" as "toZoo")
+            create using "xsjs.animals:animalsCrud.xsjslib::animalsCreate"
+            update using "xsjs.animals:animalsCrud.xsjslib::animalsUpdate"
+            delete using "xsjs.animals:animalsCrud.xsjslib::animalsDelete";
+
+    association "Animals_2_Zoo" principal "Animals"("aid")
+            multiplicity "1" dependent "Zoo"("aid") multiplicity "1";
+}

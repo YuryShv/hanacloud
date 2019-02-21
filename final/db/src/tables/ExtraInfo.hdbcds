@@ -1,0 +1,18 @@
+﻿namespace hw3;
+using hw3::Animals;
+
+context ExtraInfo{
+
+		entity Zoo {
+    		@Comment: 'Id of Address'
+		    key adid : String(4);
+		    @Comment: 'Animal for Zoo'
+		    aid : String(4);
+		    @Comment: 'City'
+		    city : String(100);
+		    @Comment: 'Street'
+		    strt : String(100);
+		    @Comment: 'House Number'
+		    hnum : Integer;
+		};
+};

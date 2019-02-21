@@ -11,7 +11,8 @@ import com.hw6.hw6springdemo.domain.Person;
 	private PersonDao personDao;   
 	public List<Person> getPersonAll() 
 	{   return personDao.getAll();  
-	}    public Person getPerson(String id) 
+	}    
+	public Person getPerson(String id) 
 	{   Optional<Person> personOptional = this.personDao.getById(id);   
 	Person person = null;  
 	if (personOptional.isPresent()) {

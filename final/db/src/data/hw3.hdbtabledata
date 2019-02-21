@@ -1,0 +1,39 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "hw3::Animals",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "hw3::Animals.csv",
+        "has_header": true
+      },
+      "import_settings": {
+        "import_columns": [
+          "aid",
+          "aname",
+          "akind",
+          "ts_update",
+          "ts_create"
+        ]
+      }
+    },
+    {
+      "target_table": "hw3::ExtraInfo.Zoo",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "hw3::Zoo.csv",
+        "has_header": true
+      },
+      "import_settings": {
+        "import_columns": [
+          "adid",
+					"aid",
+					"city",
+					"strt",
+					"hnum"
+        ]
+      }
+    }
+  ]
+}
