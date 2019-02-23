@@ -6,17 +6,23 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired; 
 import org.springframework.stereotype.Service;
 
+import com.google.gson.JsonElement;
 import com.hw6.hw6springdemo.domain.Destination;
 import com.hw6.hw6springdemo.domain.Property;
 import com.sap.cloud.sdk.cloudplatform.CloudPlatform;
+import com.sap.cloud.sdk.cloudplatform.ScpCfCloudPlatform;
 import com.sap.cloud.sdk.cloudplatform.connectivity.DestinationAccessor;
 import com.sap.cloud.sdk.cloudplatform.connectivity.GenericDestination; 
  
 @Service public class CloudService {  
 	@Autowired  private CloudPlatform platform;  
+	@Autowired private ScpCfCloudPlatform namespace;
 	public String getApplicationName() { 
 		return platform.getApplicationName();  
 		}
+	public Map<String, JsonElement> getNameSpace() {
+		return namespace.getVcapApplication();
+	}
 	public List<Destination> getDestinations() {
 		List<Destination> destinationList = new ArrayList<Destination>();
 		Map<String, GenericDestination> destinationMap = DestinationAccessor.getGenericDestinationsByName();

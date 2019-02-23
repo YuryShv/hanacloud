@@ -1,12 +1,17 @@
 package com.hw6.hw6springdemo.controller;
 import java.util.List;
+import java.util.Map;
 
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired; 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping; 
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.google.gson.JsonElement;
 import com.hw6.hw6springdemo.domain.Destination;
 import com.hw6.hw6springdemo.service.CloudService;
 import com.hw6.hw6springdemo.service.SecurityService;
@@ -16,6 +21,9 @@ import com.sap.cloud.sdk.s4hana.connectivity.rfc.exception.AccessDeniedException
 	@Autowired  private SecurityService securityService; 
 	@RequestMapping(value="/", method=RequestMethod.GET)  
 	public String getHome(Model model) {   
+		Map<String, JsonElement> vcap = cloudService.getNameSpace();
+		JsonElement vc = vcap.get("space_name");
+		model.addAttribute("VCAP",vc.toString());
 		String appName = cloudService.getApplicationName();   
 		model.addAttribute("appName", appName); 
 		List<Destination> destinations = cloudService.getDestinations();
