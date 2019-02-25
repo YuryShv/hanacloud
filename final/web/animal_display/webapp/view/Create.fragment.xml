@@ -9,12 +9,12 @@
     class="sapUiPopupWithPadding" >
     <subHeader>
       <Toolbar>
-            <Input id="newName" type="Text" placeholder="Animal name ..." ></Input>
-            <Input id="newKind" type="Text" placeholder="Animal kind  ..." ></Input>
+            <Input value="{animal>/aname}" type="Text" placeholder="{i18n>newAnimalName}" ></Input>
+            <Input value="{animal>/akind}" type="Text" placeholder="{i18n>newAnimalKind}" ></Input>
       </Toolbar>
     </subHeader>
     <content>
-    <Text width="300px" text ="New animal has arrived? Add new one here."/>
+    <Text width="300px" text ="{i18n>newAnimal}"/>
     </content>
         <beginButton>
       <Button text="Add" press=".animalsCreate" />

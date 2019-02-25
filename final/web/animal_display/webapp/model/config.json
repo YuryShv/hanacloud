@@ -1,0 +1,8 @@
+{
+    "id": 0,
+    "name": 1,
+    "kind": 2,
+    "saveButton": 5,
+	"editButton": 6,
+    "deleteButton": 7
+}

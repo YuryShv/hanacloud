@@ -6,41 +6,49 @@ sap.ui.define([
 ], function (Controller, MessageToast, MessageBox, Fragment) {
 	"use strict";
 	this.editOn = function (items, index) {
-		items[index].getCells()[5].setEnabled(true);
-		items[index].getCells()[6].setEnabled(false);
-		items[index].getCells()[7].setEnabled(true);
-	};
+		for (var j = 1; j < 3; j++) {
+			items[index].getCells()[j].setEnabled(items[index].getSelected());
+			}
+			items[index].getCells()[5].setEnabled(true);
+			items[index].getCells()[6].setEnabled(false);
+			items[index].getCells()[7].setEnabled(true);
+		};
 	this.editOff = function (items, index) {
 		for (var j = 1; j < 3; j++) {
 			items[index].getCells()[j].setEnabled(false);
 		}
 		items[index].getCells()[5].setEnabled(false);
 		items[index].getCells()[7].setEnabled(false);
+
 	};
 	this.setEnabledOnSelectChange = function(aItems,index){
 		if (!aItems[index].getCells()[6].getEnabled()) {
 			for (var i = 0; i < aItems.length; i++) {
 				aItems[i].getCells()[6].setEnabled(aItems[i].getSelected());
 				editOff(aItems, i);
+				
 			}
 		}
-	}
+	};
+	this.getCurrTable =function(that){
+		return that.getView().byId("details");
+	};
+	this.getAModel = function(that){
+		return that.getView().getModel("animals");
+	};
 	return Controller.extend("animal_display.controller.Display", {
 		onInit: function () {},
-		onSelect: function (oEvent) {
-			var oTable = this.getView().byId("details");
+		onSelect: function () {
+			var oTable = getCurrTable(this);
 			var aItems = oTable.getItems();
 			var index = oTable.indexOfItem(oTable.getSelectedItem());
 			setEnabledOnSelectChange(aItems,index);
 		},
 		animalsEdit: function () {
-			var oTable = this.getView().byId("details");
+			var oTable = getCurrTable(this);
 			var aItems = oTable.getItems();
 			var selItem = oTable.getSelectedItem();
 			var index = oTable.indexOfItem(selItem);
-			for (var j = 1; j < 3; j++) {
-				aItems[index].getCells()[j].setEnabled(aItems[index].getSelected());
-			}
 			editOn(aItems, index);
 		},
 		showCreateDialog: function () {
@@ -63,7 +71,7 @@ sap.ui.define([
 			this.byId("createDialog").close();
 		},
 		animalsUpdate: function () {
-			var oTable = this.getView().byId("details");
+			var oTable = getCurrTable(this);
 			var selItem = oTable.getSelectedItem();
 			var aItems = oTable.getItems();
 			var index = oTable.indexOfItem(selItem);
@@ -76,7 +84,7 @@ sap.ui.define([
 				ts_update: null,
 				ts_create: null
 			};
-			var oModel = this.getView().getModel("animals");
+			var oModel = getAModel(this);
 			oModel.update("/Animals('" + id + "')", Animal, {
 				merge: false,
 				success: function () {
@@ -89,7 +97,7 @@ sap.ui.define([
 			editOff(aItems, index);
 		},
 		animalsDelete: function(){
-			var oTable = this.getView().byId("details");
+			var oTable = getCurrTable(this);
             var selItem = oTable.getSelectedItem();
             var id = selItem.getBindingContext("animals").getObject().aid;
             var settings = {
@@ -133,7 +141,7 @@ sap.ui.define([
 					aname: name,
 					akind: kind
 				};
-				var oModel = this.getView().getModel("animals");
+				var oModel = getAModel(this);
 				oModel.create("/Animals", Animal, {
 					success: function () {
 						MessageToast.show("Animal was successfully added.");

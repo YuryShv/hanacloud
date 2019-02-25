@@ -5,28 +5,26 @@ sap.ui.define([
 	"sap/ui/core/Fragment"
 ], function (Controller, MessageToast, MessageBox, Fragment) {
 	"use strict";
-	this.editOn = function (items, index) {
+	this.editOn = function (items, index,that) {
 		for (var j = 1; j < 3; j++) {
 			items[index].getCells()[j].setEnabled(items[index].getSelected());
 			}
-			items[index].getCells()[5].setEnabled(true);
-			items[index].getCells()[6].setEnabled(false);
-			items[index].getCells()[7].setEnabled(true);
+			items[index].getCells()[that.config.saveButton].setEnabled(true);
+			items[index].getCells()[that.config.editButton].setEnabled(false);
+			items[index].getCells()[that.config.deleteButton].setEnabled(true);
 		};
-	this.editOff = function (items, index) {
+	this.editOff = function (items, index,that) {
 		for (var j = 1; j < 3; j++) {
 			items[index].getCells()[j].setEnabled(false);
 		}
-		items[index].getCells()[5].setEnabled(false);
-		items[index].getCells()[7].setEnabled(false);
-
+		items[index].getCells()[that.config.saveButton].setEnabled(false);
+		items[index].getCells()[that.config.deleteButton].setEnabled(false);
 	};
-	this.setEnabledOnSelectChange = function(aItems,index){
-		if (!aItems[index].getCells()[6].getEnabled()) {
+	this.setEnabledOnSelectChange = function(aItems,index,that){
+		if (!aItems[index].getCells()[that.config.editButton].getEnabled()) {
 			for (var i = 0; i < aItems.length; i++) {
-				aItems[i].getCells()[6].setEnabled(aItems[i].getSelected());
-				editOff(aItems, i);
-				
+				aItems[i].getCells()[that.config.editButton].setEnabled(aItems[i].getSelected());
+				editOff(aItems, i, that);
 			}
 		}
 	};
@@ -37,19 +35,24 @@ sap.ui.define([
 		return that.getView().getModel("animals");
 	};
 	return Controller.extend("animal_display.controller.Display", {
-		onInit: function () {},
+		onInit: function () {
+			this.config = this.getView().getModel('config').getData();
+			this.animal = this.getView().getModel('animal');
+			this.animals = getAModel(this);
+
+		},
 		onSelect: function () {
 			var oTable = getCurrTable(this);
 			var aItems = oTable.getItems();
 			var index = oTable.indexOfItem(oTable.getSelectedItem());
-			setEnabledOnSelectChange(aItems,index);
+			setEnabledOnSelectChange(aItems,index,this);
 		},
 		animalsEdit: function () {
 			var oTable = getCurrTable(this);
 			var aItems = oTable.getItems();
 			var selItem = oTable.getSelectedItem();
 			var index = oTable.indexOfItem(selItem);
-			editOn(aItems, index);
+			editOn(aItems, index, this);
 		},
 		showCreateDialog: function () {
 			var oView = this.getView();
@@ -75,17 +78,11 @@ sap.ui.define([
 			var selItem = oTable.getSelectedItem();
 			var aItems = oTable.getItems();
 			var index = oTable.indexOfItem(selItem);
-			var id = aItems[index].getCells()[0].getText();
-			var name = aItems[index].getCells()[1].getValue();
-			var kind = aItems[index].getCells()[2].getValue();
-			var Animal = {
-				aname: name,
-				akind: kind,
-				ts_update: null,
-				ts_create: null
-			};
-			var oModel = getAModel(this);
-			oModel.update("/Animals('" + id + "')", Animal, {
+			var obj = this.animal.getData();
+			obj.aid = aItems[index].getCells()[this.config.id].getText();
+			obj.aname = aItems[index].getCells()[this.config.name].getValue();
+			obj.akind = aItems[index].getCells()[this.config.kind].getValue();
+			this.animals.update("/Animals('" + obj.aid + "')", obj, {
 				merge: false,
 				success: function () {
 					MessageToast.show("Animal was successfully updated.");
@@ -94,7 +91,7 @@ sap.ui.define([
 					MessageToast.show("Error.");
 				}
 			});
-			editOff(aItems, index);
+			editOff(aItems, index, this);
 		},
 		animalsDelete: function(){
 			var oTable = getCurrTable(this);
@@ -115,9 +112,10 @@ sap.ui.define([
             });
 		},
 		animalsCreate: function () {
-			var name = this.byId("newName").getValue();
-			var kind = this.byId("newKind").getValue();
-			if (!name || !kind) {
+			var obj = this.animal.getData();
+			delete obj.ts_update;
+			delete obj.ts_create;
+			if (!obj.aname || !obj.akind) {
 				var dialog = new sap.m.Dialog({
 					title: 'Error',
 					type: 'Message',
@@ -137,12 +135,7 @@ sap.ui.define([
 				});
 				dialog.open();
 			} else {
-				var Animal = {
-					aname: name,
-					akind: kind
-				};
-				var oModel = getAModel(this);
-				oModel.create("/Animals", Animal, {
+				this.animals.create("/Animals", obj, {
 					success: function () {
 						MessageToast.show("Animal was successfully added.");
 					},

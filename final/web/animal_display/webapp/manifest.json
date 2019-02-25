@@ -72,6 +72,14 @@
 					"bundleName": "animal_display.i18n.i18n"
 				}
 			},
+			"config": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "./model/config.json"
+			},
+			"animal": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "./model/animal.json"
+            },
 			"animals": {
 				"dataSource": "mainService",
 				"settings": {
