@@ -1,4 +1,5 @@
 package com.hw6.hw6springdemo.service;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.Optional; 
 import org.springframework.beans.factory.annotation.Autowired; 
@@ -24,7 +25,10 @@ import com.hw6.hw6springdemo.domain.Person;
 	}    
 	public void updatePerson(Person person) {   
 		this.personDao.update(person);  
-		}    
+		} 
+	public Person getPersonCars(String id) throws SQLException {
+		return personDao.getCars(id);
+	}
 	public void deletePerson(String id) {   
 		this.personDao.delete(id);  
 		}   

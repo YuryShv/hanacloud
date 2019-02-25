@@ -2,26 +2,36 @@ package com.hw6.hw6springdemo.service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired; 
 import org.springframework.stereotype.Service;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.hw6.hw6springdemo.domain.Destination;
 import com.hw6.hw6springdemo.domain.Property;
 import com.sap.cloud.sdk.cloudplatform.CloudPlatform;
 import com.sap.cloud.sdk.cloudplatform.ScpCfCloudPlatform;
 import com.sap.cloud.sdk.cloudplatform.connectivity.DestinationAccessor;
-import com.sap.cloud.sdk.cloudplatform.connectivity.GenericDestination; 
+import com.sap.cloud.sdk.cloudplatform.connectivity.GenericDestination;
+import com.sap.cloud.sdk.cloudplatform.connectivity.ScpCfDestination;
+import com.sap.cloud.sdk.cloudplatform.connectivity.ScpCfService;
+import com.sap.cloud.sdk.cloudplatform.security.AuthToken;
+import com.sap.cloud.sdk.cloudplatform.security.AuthTokenAccessor; 
  
 @Service public class CloudService {  
 	@Autowired  private CloudPlatform platform;  
-	@Autowired private ScpCfCloudPlatform namespace;
+	@Autowired private ScpCfCloudPlatform spacename;
+	@Autowired private ScpCfCloudPlatform getSchema;
 	public String getApplicationName() { 
 		return platform.getApplicationName();  
 		}
-	public Map<String, JsonElement> getNameSpace() {
-		return namespace.getVcapApplication();
+	public Map<String, JsonElement> getSpaceName() {
+		return spacename.getVcapApplication();
+	}
+	public Map<String, JsonArray> getSchemaName() {
+		return getSchema.getVcapServices();
 	}
 	public List<Destination> getDestinations() {
 		List<Destination> destinationList = new ArrayList<Destination>();

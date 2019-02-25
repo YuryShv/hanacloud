@@ -5,7 +5,11 @@
 </head>
 <body>  
 <h2 th:text="'Hello, ' + ${appName} + '.Glad to see you!'">Application</h2>
-<p th:text="'NameSpace: ' + ${VCAP}">VCAP: </p> 
+<p th:text="'SpaceName: ' + ${VCAP}">VCAP: </p> 
+<p th:text="'Token: ' + ${token}">token: </p>     
+<p th:text="'schema: ' + ${schema}">schema: </p> 
+
+
 <div th:each="destination: ${destinations}">
 		<p th:text="'name: ' + ${destination.name}">name: </p>
 		<p th:text="'description: ' + ${destination.description}">description: </p>

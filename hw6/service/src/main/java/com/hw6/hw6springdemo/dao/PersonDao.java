@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.hw6.hw6springdemo.domain.Cars;
 import com.hw6.hw6springdemo.domain.Person;
 import com.hw6.hw6springdemo.intfce.IPersonDao;
 
@@ -77,7 +78,36 @@ public class PersonDao implements IPersonDao {
 		}
 		return personList;
 	}
+	public Person getCars(String id) throws SQLException {
 
+		Connection conn = dataSource.getConnection();
+		PreparedStatement stmnt = conn.prepareStatement("SELECT TOP 1 \"usid\", \"name\", \"ts_update\", \"ts_create\" FROM \"hw3::User\" WHERE \"usid\" = ?");
+			stmnt.setString(1, id);
+			ResultSet result = stmnt.executeQuery();
+			Person person = new Person();
+			if (result.next()) {
+				person.setId(id);
+				person.setName(result.getString("name"));
+				person.setTs_update(result.getTimestamp("ts_update"));
+				person.setTs_create(result.getTimestamp("ts_create"));
+			}
+
+		List<Cars> carList = new ArrayList<Cars>();
+
+			PreparedStatement stmnt2 = conn.prepareStatement("SELECT \"crid\", \"usid\", \"name\" FROM \"hw3::ExtraInfo.Cars\" WHERE \"usid\" = ? ");
+			stmnt2.setString(1, id);
+			ResultSet result2 = stmnt2.executeQuery();
+			while (result2.next()) {
+				Cars car = new Cars();
+				car.setCrid(result2.getString("crid"));
+				car.setName(result2.getString("usid"));
+				car.setUsid(result2.getString("name"));
+				carList.add(car);
+			}
+			person.carList = carList;
+			conn.close();
+		return person;
+	}
 	@Override
 	public void save(Person entity) {
 		try (Connection conn = dataSource.getConnection();

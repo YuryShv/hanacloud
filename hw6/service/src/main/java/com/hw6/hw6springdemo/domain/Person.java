@@ -1,12 +1,20 @@
 package com.hw6.hw6springdemo.domain;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 public class Person {
 	private String id;    
 	private String name;
 	private Timestamp ts_update;
 	private Timestamp ts_create;
+	public List<Cars> carList;
+	public List<Cars> getCarList() {
+		return carList;
+	}
+	public void setCarList(List<Cars> carList) {
+		this.carList = carList;
+	}
 	public Timestamp getTs_update() {
 		return ts_update;
 	}
