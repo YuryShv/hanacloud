@@ -6,17 +6,15 @@ sap.ui.define([
 ], function (Controller, MessageToast, MessageBox, Fragment) {
 	"use strict";
 	this.editOn = function (items, index,that) {
-		for (var j = 1; j < 3; j++) {
-			items[index].getCells()[j].setEnabled(items[index].getSelected());
-			}
+			items[index].getCells()[that.config.name].setEnabled(items[index].getSelected());
+			items[index].getCells()[that.config.kind].setEnabled(items[index].getSelected());
 			items[index].getCells()[that.config.saveButton].setEnabled(true);
 			items[index].getCells()[that.config.editButton].setEnabled(false);
 			items[index].getCells()[that.config.deleteButton].setEnabled(true);
 		};
 	this.editOff = function (items, index,that) {
-		for (var j = 1; j < 3; j++) {
-			items[index].getCells()[j].setEnabled(false);
-		}
+		items[index].getCells()[that.config.name].setEnabled(false);
+		items[index].getCells()[that.config.kind].setEnabled(false);
 		items[index].getCells()[that.config.saveButton].setEnabled(false);
 		items[index].getCells()[that.config.deleteButton].setEnabled(false);
 	};

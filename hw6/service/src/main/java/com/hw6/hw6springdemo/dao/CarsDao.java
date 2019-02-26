@@ -20,7 +20,8 @@ import com.hw6.hw6springdemo.intfce.ICarsDao;
 
 @Repository
 public class CarsDao implements ICarsDao {
-
+	private static final String DB_NAME = "\"hw3::ExtraInfo.Cars\"";
+	private static final String CAR_ID = "\"crid\"";
 	private static final Logger logger = LoggerFactory.getLogger(CarsDao.class);
 	@Autowired
 	private DataSource dataSource;
@@ -30,7 +31,7 @@ public class CarsDao implements ICarsDao {
 		Optional<Cars> entity = null;
 		try (Connection conn = dataSource.getConnection();
 				PreparedStatement stmnt = conn.prepareStatement(
-						"SELECT TOP 1 \"crid\", \"usid\", \"name\" FROM \"hw3::ExtraInfo.Cars\" WHERE \"crid\" = ?")) {
+						"SELECT TOP 1 * FROM "+DB_NAME+" WHERE "+CAR_ID+" = ?")) {
 			stmnt.setString(1, id);
 			ResultSet result = stmnt.executeQuery();
 			if (result.next()) {
@@ -53,7 +54,7 @@ public class CarsDao implements ICarsDao {
 		List<Cars> carList = new ArrayList<Cars>();
 		try (Connection conn = dataSource.getConnection();
 				PreparedStatement stmnt = conn
-						.prepareStatement("SELECT  \"crid\", \"usid\", \"name\" FROM \"hw3::ExtraInfo.Cars\"")) {
+						.prepareStatement("SELECT * FROM "+DB_NAME+"")) {
 			ResultSet result = stmnt.executeQuery();
 			while (result.next()) {
 				Cars car = new Cars();
@@ -72,7 +73,7 @@ public class CarsDao implements ICarsDao {
 	public void save(Cars entity) {
 		try (Connection conn = dataSource.getConnection();
 				PreparedStatement stmnt = conn.prepareStatement(
-						"INSERT INTO \"hw3::ExtraInfo.Cars\" (\"crid\",\"usid\",\"name\") VALUES (?,?,?)")) {
+						"INSERT INTO "+DB_NAME+" VALUES (?,?,?)")) {
 			stmnt.setString(1, entity.getCrid());
 			stmnt.setString(2, entity.getUsid());
 			stmnt.setString(3, entity.getName());
@@ -85,7 +86,7 @@ public class CarsDao implements ICarsDao {
 	@Override
 	public void delete(String id) {
 		try (Connection conn = dataSource.getConnection();
-				PreparedStatement stmnt = conn.prepareStatement("DELETE FROM \"hw3::ExtraInfo.Cars\" WHERE \"crid\" = ?")) {
+				PreparedStatement stmnt = conn.prepareStatement("DELETE FROM "+DB_NAME+" WHERE "+CAR_ID+" = ?")) {
 			stmnt.setString(1, id);
 			stmnt.execute();
 		} catch (SQLException e) {
@@ -97,7 +98,7 @@ public class CarsDao implements ICarsDao {
 	public void update(Cars entity) {
 		try (Connection conn = dataSource.getConnection();
 				PreparedStatement stmnt = conn.prepareStatement(
-						"UPDATE \"hw3::ExtraInfo.Cars\" SET \"usid\" = ?, \"name\" = ? WHERE \"crid\" = ?")) {
+						"UPDATE "+DB_NAME+" SET \"usid\" = ?, \"name\" = ? WHERE "+CAR_ID+" = ?")) {
 			stmnt.setString(1, entity.getUsid());
 			stmnt.setString(2, entity.getName());
 			stmnt.setString(3, entity.getCrid());

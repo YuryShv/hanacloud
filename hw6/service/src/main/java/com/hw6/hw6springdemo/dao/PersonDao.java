@@ -24,7 +24,9 @@ import com.hw6.hw6springdemo.intfce.IPersonDao;
 
 @Repository
 public class PersonDao implements IPersonDao {
-
+	private static final String DB_NAME = "\"hw3::User\"";
+	private static final String DB_CAR = "\"hw3::ExtraInfo.Cars\"";
+	private static final String USER_ID = "\"usid\"";
 	private static final Logger logger = LoggerFactory.getLogger(PersonDao.class);
 	private static Timestamp getCurrTime() {
 		Date date = new Date(0);
@@ -39,7 +41,7 @@ public class PersonDao implements IPersonDao {
 		Optional<Person> entity = null;
 		try (Connection conn = dataSource.getConnection();
 				PreparedStatement stmnt = conn.prepareStatement(
-						"SELECT TOP 1 \"usid\", \"name\", \"ts_update\", \"ts_create\" FROM \"hw3::User\" WHERE \"usid\" = ?")) {
+						"SELECT TOP 1 * FROM "+ DB_NAME + " WHERE "+ USER_ID +" = ?")) {
 			stmnt.setString(1, id);
 			ResultSet result = stmnt.executeQuery();
 			if (result.next()) {
@@ -63,7 +65,7 @@ public class PersonDao implements IPersonDao {
 		List<Person> personList = new ArrayList<Person>();
 		try (Connection conn = dataSource.getConnection();
 				PreparedStatement stmnt = conn
-						.prepareStatement("SELECT \"usid\", \"name\", \"ts_update\", \"ts_create\" FROM \"hw3::User\"")) {
+						.prepareStatement("SELECT * FROM "+DB_NAME+"")) {
 			ResultSet result = stmnt.executeQuery();
 			while (result.next()) {
 				Person person = new Person();
@@ -81,7 +83,7 @@ public class PersonDao implements IPersonDao {
 	public Person getCars(String id) throws SQLException {
 
 		Connection conn = dataSource.getConnection();
-		PreparedStatement stmnt = conn.prepareStatement("SELECT TOP 1 \"usid\", \"name\", \"ts_update\", \"ts_create\" FROM \"hw3::User\" WHERE \"usid\" = ?");
+		PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM "+DB_NAME+" WHERE "+USER_ID+" = ?");
 			stmnt.setString(1, id);
 			ResultSet result = stmnt.executeQuery();
 			Person person = new Person();
@@ -94,7 +96,7 @@ public class PersonDao implements IPersonDao {
 
 		List<Cars> carList = new ArrayList<Cars>();
 
-			PreparedStatement stmnt2 = conn.prepareStatement("SELECT \"crid\", \"usid\", \"name\" FROM \"hw3::ExtraInfo.Cars\" WHERE \"usid\" = ? ");
+			PreparedStatement stmnt2 = conn.prepareStatement("SELECT \"crid\", \"usid\", \"name\" FROM "+DB_CAR+" WHERE "+USER_ID+" = ? ");
 			stmnt2.setString(1, id);
 			ResultSet result2 = stmnt2.executeQuery();
 			while (result2.next()) {
@@ -112,7 +114,7 @@ public class PersonDao implements IPersonDao {
 	public void save(Person entity) {
 		try (Connection conn = dataSource.getConnection();
 				PreparedStatement stmnt = conn.prepareStatement(
-						"INSERT INTO \"hw3::User\"(\"name\", \"ts_update\", \"ts_create\") VALUES (?,?,?)")) {
+						"INSERT INTO "+DB_NAME+" VALUES (?,?,?)")) {
 			stmnt.setString(1, entity.getName());
 			Timestamp currtime = getCurrTime();
 			stmnt.setTimestamp(2, currtime);
@@ -126,7 +128,7 @@ public class PersonDao implements IPersonDao {
 	@Override
 	public void delete(String id) {
 		try (Connection conn = dataSource.getConnection();
-				PreparedStatement stmnt = conn.prepareStatement("DELETE FROM \"hw3::User\" WHERE \"usid\" = ?")) {
+				PreparedStatement stmnt = conn.prepareStatement("DELETE FROM "+DB_NAME+" WHERE "+USER_ID+" = ?")) {
 			stmnt.setString(1, id);
 			stmnt.execute();
 		} catch (SQLException e) {
@@ -138,7 +140,7 @@ public class PersonDao implements IPersonDao {
 	public void update(Person entity) {
 		try (Connection conn = dataSource.getConnection();
 				PreparedStatement stmnt = conn.prepareStatement(
-						"UPDATE \"hw3::User\" SET \"name\" = ?, \"ts_update\" = ? WHERE \"usid\" = ?")) {
+						"UPDATE "+DB_NAME+" SET \"name\" = ?, \"ts_update\" = ? WHERE "+USER_ID+" = ?")) {
 			stmnt.setString(1, entity.getName());
 			Timestamp currtime = getCurrTime();
 			stmnt.setTimestamp(2, currtime);
