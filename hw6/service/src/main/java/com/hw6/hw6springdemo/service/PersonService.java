@@ -26,7 +26,7 @@ import com.hw6.hw6springdemo.domain.Person;
 	public void updatePerson(Person person) {   
 		this.personDao.update(person);  
 		} 
-	public Person getPersonCars(String id) throws SQLException {
+	public List<String> getPersonCars(String id) throws SQLException {
 		return personDao.getCars(id);
 	}
 	public void deletePerson(String id) {   

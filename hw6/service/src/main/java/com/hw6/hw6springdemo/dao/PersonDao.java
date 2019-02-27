@@ -80,35 +80,20 @@ public class PersonDao implements IPersonDao {
 		}
 		return personList;
 	}
-	public Person getCars(String id) throws SQLException {
-
-		Connection conn = dataSource.getConnection();
-		PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM "+DB_NAME+" WHERE "+USER_ID+" = ?");
-			stmnt.setString(1, id);
-			ResultSet result = stmnt.executeQuery();
-			Person person = new Person();
-			if (result.next()) {
-				person.setId(id);
-				person.setName(result.getString("name"));
-				person.setTs_update(result.getTimestamp("ts_update"));
-				person.setTs_create(result.getTimestamp("ts_create"));
-			}
-
-		List<Cars> carList = new ArrayList<Cars>();
-
-			PreparedStatement stmnt2 = conn.prepareStatement("SELECT \"crid\", \"usid\", \"name\" FROM "+DB_CAR+" WHERE "+USER_ID+" = ? ");
-			stmnt2.setString(1, id);
-			ResultSet result2 = stmnt2.executeQuery();
-			while (result2.next()) {
-				Cars car = new Cars();
-				car.setCrid(result2.getString("crid"));
-				car.setName(result2.getString("usid"));
-				car.setUsid(result2.getString("name"));
-				carList.add(car);
-			}
-			person.carList = carList;
-			conn.close();
-		return person;
+	public List<String> getCars(String id) throws SQLException {
+		 List<String> list = new ArrayList<String>();
+		    try (Connection conn = dataSource.getConnection();
+		        PreparedStatement stmnt = conn.prepareStatement("SELECT * FROM "+DB_NAME+" INNER JOIN "+DB_CAR+" ON "+DB_NAME+"."+USER_ID+" = "+DB_CAR+"."+USER_ID+" WHERE "+DB_NAME+"."+USER_ID+" = ?")) {
+		      stmnt.setString(1, id);
+		      ResultSet result = stmnt.executeQuery();        
+		      while (result.next()) {
+		        list.add(result.getString("usid"));
+		        list.add(result.getString("crid"));
+		      }          
+		    } catch (SQLException e) {
+		      logger.error("Error while trying to get entity by Id: " + e.getMessage());
+		    }
+		    return list;
 	}
 	@Override
 	public void save(Person entity) {

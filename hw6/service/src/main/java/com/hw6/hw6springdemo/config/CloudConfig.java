@@ -14,16 +14,11 @@ import com.sap.cloud.sdk.cloudplatform.security.AuthTokenFacade;
 	return CloudPlatformAccessor.getCloudPlatform(); 
 	}  
 @Bean
-	public ScpCfCloudPlatform spacename() {
+	public ScpCfCloudPlatform cloud() {
 		return ScpCfCloudPlatform.getInstanceOrThrow();
-		
 	}
-@Bean
-public ScpCfCloudPlatform getSchema() {
-	return ScpCfCloudPlatform.getInstanceOrThrow();
-}
-@Bean
-public AuthTokenFacade authtoken() {
-	return new AuthTokenFacade();
-}
+	@Bean
+	public AuthTokenFacade authtoken() {
+		return new AuthTokenFacade();
+	}
 }

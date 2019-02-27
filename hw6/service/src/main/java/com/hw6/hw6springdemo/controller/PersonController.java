@@ -33,7 +33,7 @@ import com.hw6.hw6springdemo.service.PersonService;
 		   personService.deletePerson(id);  
 		   } 
 		@GetMapping(value="/personCars/{id}")
-		public Person getPersonCars(@PathVariable String id) throws SQLException {
+		public List<String> getPersonCars(@PathVariable String id) throws SQLException {
 			return personService.getPersonCars(id);
 		}
 	   @PutMapping(value="/person")

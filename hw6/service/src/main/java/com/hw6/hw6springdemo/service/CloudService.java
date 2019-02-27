@@ -26,17 +26,16 @@ import com.sap.cloud.sdk.cloudplatform.security.AuthTokenFacade;
  
 @Service public class CloudService {  
 	@Autowired  private CloudPlatform platform;  
-	@Autowired private ScpCfCloudPlatform spacename;
-	@Autowired private ScpCfCloudPlatform getSchema;
+	@Autowired private ScpCfCloudPlatform cloud;
 	@Autowired private AuthTokenFacade authtoken;
 	public String getApplicationName() { 
 		return platform.getApplicationName();  
 		}
 	public Map<String, JsonElement> getSpaceName() {
-		return spacename.getVcapApplication();
+		return cloud.getVcapApplication();
 	}
 	public Map<String, JsonArray> getSchemaName() {
-		return getSchema.getVcapServices();
+		return cloud.getVcapServices();
 	}
 	public Optional<AuthToken> getCurrToken() {
 		return authtoken.getCurrentToken();
